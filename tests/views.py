@@ -73,13 +73,13 @@ def startTesting(request, subjectID):
         request.session['exclude'] = []
         request.session['checkEnd'] = 0
         request.session['testName'] = currSubject.subjectName
-        for item in themeID:
-            request.session['calibQuest'].extend(list(Question.objects.filter(theme_id= item, complexity__range=DIFF['Medium']).values_list('id',flat=True).order_by('?')[:2]))
+        #for item in themeID:
+            #request.session['calibQuest'].extend(list(Question.objects.filter(theme_id= item, complexity__range=DIFF['Medium']).values_list('id',flat=True).order_by('?')[:2]))
+        request.session['calibQuest'] = list(Question.objects.all().values_list('id',flat=True))
         request.session['score'] = 0
     if request.session['calibQuest']:
         listCopy = request.session['calibQuest']
         questionID = listCopy.pop()
-        request.session['exclude'].append(questionID)
         request.session['calibQuest'] = listCopy
         question = Question.objects.get(pk=questionID)
         return render(request, 'tests/test.html', {'question': question})
@@ -89,18 +89,18 @@ def startTesting(request, subjectID):
         return HttpResponseRedirect(reverse('tests:getNextQuestion'))
 
 def getNextQuestion(request):
-    if request.session['score'] < 5 and request.session['checkEnd'] != 5:
-        nbc.setNextDiff(request.session['testStatistic'])
-        themeID = str(random.choice(request.session['themeID']))
-        cmpl = DIFF[request.session['testStatistic']['Themes'][themeID]['currDiff']]
-        question = Question.objects.filter(theme_id = themeID, complexity__range = cmpl).exclude(pk__in = request.session['exclude']).values()[:1]
-        question = Question.objects.get(pk=question[0]['id'])
-        return render(request, 'tests/test.html', {'question': question})
-    else:
-        if request.session['score'] >= 5:
-            endFlag = 'Превышен порог минимального балла'
-        else:
-            endFlag = 'Допущено 5 подряд ошибок'
+    # if request.session['score'] < 5 and request.session['checkEnd'] != 5:
+    #     nbc.setNextDiff(request.session['testStatistic'])
+    #     themeID = str(random.choice(request.session['themeID']))
+    #     cmpl = DIFF[request.session['testStatistic']['Themes'][themeID]['currDiff']]
+    #     question = Question.objects.filter(theme_id = themeID, complexity__range = cmpl).exclude(pk__in = request.session['exclude']).values()[:1]
+    #     question = Question.objects.get(pk=question[0]['id'])
+    #     return render(request, 'tests/test.html', {'question': question})
+    # else:
+    #     if request.session['score'] >= 5:
+    #         endFlag = 'Превышен порог минимального балла'
+    #     else:
+    #         endFlag = 'Допущено 5 подряд ошибок'
         res = request.session['testStatistic']['Results']
         result = Resutl(user=request.user,name=request.session['testName'],
                         filePath=request.session['filePath'].split('\\')[-1],
@@ -109,7 +109,7 @@ def getNextQuestion(request):
                         mainRight=request.session['mainStatistic']['Results']['right'],mainWrong=request.session['mainStatistic']['Results']['wrong'],
                         score=res['right']+res['wrong'])
         result.save()
-        return render(request, 'tests/results.html',{'results': result,'main': request.session['mainStatistic']['Results'],'calib':request.session['calibStatistic'],'endFlag':endFlag})
+        return render(request, 'tests/results.html',{'results': result,'main': request.session['mainStatistic']['Results'],'calib':request.session['calibStatistic'],'endFlag':'endFlag'})
 
 def studentAnswer(request, themeID, questionID, cmplty):
     request.POST = request.POST.copy()
@@ -124,8 +124,11 @@ def studentAnswer(request, themeID, questionID, cmplty):
         if set(rightAnswers) == set(studAnswer):
             request.session['testStatistic'] = nbc.updateValues(request.session['testStatistic'],themeID,True)
             check = True
+            currQuestion.right += 1
         else:
             request.session['testStatistic'] = nbc.updateValues(request.session['testStatistic'],themeID,False)
+            currQuestion.wrong += 1
+        currQuestion.save()
         if request.session['calib']:
             return HttpResponseRedirect(reverse('tests:startTesting',args=(subjectID,)))
         else:

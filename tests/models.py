@@ -23,6 +23,8 @@ class Question(models.Model):
     questionName = models.CharField(max_length=200)
     complexity = models.FloatField(default=randomCompl)
     qType = models.CharField(max_length=10)
+    right = models.IntegerField(default=0)
+    wrong = models.IntegerField(default=0)
     def __str__(self):
         return self.questionName
 
