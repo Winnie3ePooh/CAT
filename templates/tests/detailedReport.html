@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="container" style="border:1px solid #cecece;padding-top:15px;border-radius: 20px;">
+    {% for key, values in data.items %}
+      {% for key1 in values %}
+      <div class="panel panel-default">
+        <div class="panel-heading">{{key1.question}}</div>
+        <ul class = "list-group">
+
+          {% for par in key1.sAnswers %}
+            {% if par in key1.rAnswers %}
+              <li class = "list-group-item list-group-item-success">{{par}}</li>
+            {% else %}
+              <li class = "list-group-item list-group-item-danger">{{par}}</li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    {% endfor %}
+</div>
+{% endblock %}

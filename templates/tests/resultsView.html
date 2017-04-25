@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load mathfilters %}
+
+{% block content %}
+<div class="container">
+  {% for item in results %}
+    <li><a href="{% url 'tests:testDetails' item.id %}">{{ item.name }}</a></li>
+  {% endfor %}
+</div>
+{% endblock %}

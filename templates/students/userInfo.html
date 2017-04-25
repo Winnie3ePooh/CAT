@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="container">
+    {{ context.username }}</br>
+    {{ context.email }} </br>
+    {{ context.first_name }} </br>
+    {{ context.last_name }}
+</div>
+{% endblock %}

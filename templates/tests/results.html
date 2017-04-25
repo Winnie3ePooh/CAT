@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load mathfilters %}
+
+{% block content %}
+<div class="container">
+  <h1>Результаты</h1>
+  <h2>{{endFlag}}</h2>
+  <h3>Общая статистика:</h3>
+  Всего вопросов: {{ results.rightAnswers|add:results.wrongAnswers }} <br/>
+  Из них правильно: {{results.rightAnswers}} <br/>
+  Неправильно:  {{results.wrongAnswers}}<br/>
+  <br/><br/>
+
+  <h3>Калибровочная часть:</h3>
+  Всего вопросов: {{calib.right|add:calib.wrong}}</br>
+  Из них правильно: {{calib.right}}<br/>
+  Неправильно: {{calib.wrong}}
+  <br/><br/>
+
+  <h3>Основная часть:</h3>
+  Всего вопросов: {{main.right|add:main.wrong}}</br>
+  Из них правильно: {{main.right}}<br/>
+  Неправильно: {{main.wrong}}
+</div>
+{% endblock %}

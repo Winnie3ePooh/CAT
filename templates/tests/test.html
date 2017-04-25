@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="container">
+  <form action="{% url 'tests:studentAnswer' question.theme_id question.id question.complexity%}" method="post">
+    <h2>{{question.questionName}}</h2>
+
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+
+    {% csrf_token %}
+    {% for answer in question.answer_set.all %}
+      {% if question.answer_set.all.count != 1 %}
+        {% if question.getRightAnswersCount %}
+          <input type="radio" name="answer" id="answer{{ forloop.counter }}" value="{{ answer.id }}" />
+        {% else %}
+          <input type="checkbox" name="answer" id="answer{{ forloop.counter }}" value="{{ answer.id }}" />
+        {% endif %}
+        <label for="answer{{ forloop.counter }}">{{ answer.answerText }}</label><br />
+      {% endif %}
+    {% endfor %}
+  <input type="submit" value="Дальше" />
+</div>
+{% endblock %}
