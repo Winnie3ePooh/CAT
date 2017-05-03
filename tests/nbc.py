@@ -103,7 +103,7 @@ def irtParams(req):
     sb=1.3900144750457495
 
     srq = [x['q0']*ath+bs for x in res]
-    print(res)
-    print(srq)
+    #print(res)
+    #print(srq)
     print(ath/math.sqrt(al*res[0]['p']*res[0]['q']))
-    return ath/math.sqrt(al*res[0]['p']*res[0]['q'])
+    return srq[0]

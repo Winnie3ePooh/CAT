@@ -9,13 +9,14 @@ def writeAnswers(req,question,sAnswers,rAnswers):
     toWrite = {
         'question':question.questionName,
         'sAnswers':[],
-        'rAnswers':[]
+        'rAnswers':[],
+        'lvl': 0
     }
     for item in sAnswers:
         toWrite['sAnswers'].append(Answer.objects.get(pk=item).answerText)
     for item in rAnswers:
         toWrite['rAnswers'].append(Answer.objects.get(pk=item).answerText)
-
+    toWrite['lvl'] = req.session['lvl']
     data['Answers'].append(toWrite)
 
     with open(req.session['filePath'], 'w') as f:

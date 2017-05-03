@@ -75,6 +75,8 @@ def startTesting(request, subjectID):
         request.session['excludeID'] = []
         request.session['checkEnd'] = 0
         request.session['testName'] = currSubject.subjectName
+        request.session['lvl'] = 0
+        checking = 0
         for item in themeID:
             request.session['calibQuest'].extend(list(Question.objects.filter(theme_id= item, complexity__range=DIFF['Medium']).values_list('id',flat=True).order_by('?')[:2]))
         #request.session['calibQuest'] = list(Question.objects.all().values_list('id',flat=True))
@@ -82,7 +84,7 @@ def startTesting(request, subjectID):
     if request.session['calibQuest']:
         listCopy = request.session['calibQuest']
         questionID = listCopy.pop()
-        request.session['exclude'].append({questionID:''})
+        #request.session['exclude'].append({questionID:''})
         request.session['excludeID'].append(questionID)
         print(request.session['exclude'])
         request.session['calibQuest'] = listCopy
@@ -94,8 +96,10 @@ def startTesting(request, subjectID):
         return HttpResponseRedirect(reverse('tests:getNextQuestion'))
 
 def getNextQuestion(request):
-    check = nbc.setNextDiff(request.session['testStatistic'],request)
-    if check >= 0.3 and request.session['checkEnd'] != 5:
+    checking = nbc.setNextDiff(request.session['testStatistic'],request)
+    print(math.fabs((request.session['lvl']-checking)))
+    if math.fabs((request.session['lvl']-checking)) >= 0.08 and request.session['checkEnd'] != 4 and checking <2.4:
+        request.session['lvl'] = checking
         themeID = str(random.choice(request.session['themeID']))
         cmpl = DIFF[request.session['testStatistic']['Themes'][themeID]['currDiff']]
         question = Question.objects.filter(theme_id = themeID, complexity__range = cmpl).exclude(pk__in = request.session['excludeID']).values()[:1]
@@ -105,8 +109,8 @@ def getNextQuestion(request):
         else:
             return HttpResponseRedirect(reverse('tests:getNextQuestion'))
     else:
-        if check <= 0.3:
-            endFlag = 'Превышен порог минимального балла'
+        if math.fabs((request.session['lvl']-checking)) <= 0.08:
+            endFlag = 'Достигнут нужный уровень'
         else:
             endFlag = 'Допущено 5 подряд ошибок'
         res = request.session['testStatistic']['Results']
@@ -136,9 +140,10 @@ def studentAnswer(request, themeID, questionID, cmplty):
         else:
             request.session['testStatistic'] = nbc.updateValues(request.session['testStatistic'],themeID,False)
             currQuestion.wrong += 1
-        currQuestion.save()
         pj = currQuestion.right/(currQuestion.right+currQuestion.wrong)
-        request.session['exclude'][-1][currQuestion.id] = math.log((1-pj)/pj)
+        #request.session['exclude'][-1][currQuestion.id] = math.log((1-pj)/pj)
+        request.session['exclude'].append({currQuestion.id:math.log((1-pj)/pj)})
+        currQuestion.save()
         if request.session['calib']:
             return HttpResponseRedirect(reverse('tests:startTesting',args=(subjectID,)))
         else:
