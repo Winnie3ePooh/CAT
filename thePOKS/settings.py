@@ -13,7 +13,7 @@ SECRET_KEY = 'ctde7t#(u0ikjq$_(c8-u=hosjh$g+w3300n+gqwfjei@wt%-l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -124,5 +124,5 @@ MEDIA_URL = '/media/'
 REGISTRATION_OPEN = True
 ACCOUNT_ACTIVATION_DAYS = 7
 REGISTRATION_AUTO_LOGIN = True
-LOGIN_REDIRECT_URL = '/students/'
+LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = '/accounts/login/'

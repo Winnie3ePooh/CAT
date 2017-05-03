@@ -9,7 +9,7 @@ class AnswerInline(admin.TabularInline):
 
 class QuestionAdmin(admin.ModelAdmin):
     fieldsets = [
-        ('Вопрос',               {'fields': ['theme','questionName','complexity']}),
+        ('Вопрос',               {'fields': ['theme','questionName','complexity','right','wrong']}),
     ]
     inlines = [AnswerInline]
 

@@ -1,5 +1,10 @@
 import numpy as np
 import json
+import glob, os
+import math
+
+from django.conf import settings
+from tests.models import Question, Answer
 
 DIFFICULTIES = (
     ("Easy",(80,100)),
@@ -54,18 +59,51 @@ def updateValues(data,themeID,checkVal):
         data["Results"]["wrong"] += 1
     return data
 
-def setNextDiff(data):
+def setNextDiff(data,request):
     numOfQuestions = data["Results"]["right"] + data["Results"]["wrong"]
     processing = {}
     for item, value in data["Themes"].items():
         processing[item] = (value["rightAnswers"]/data["Results"]["right"])*(data["Results"]["right"]/numOfQuestions)
-    print(processing)
     minVal = processing[min(processing, key=processing.get)]
     maxVal = processing[max(processing, key=processing.get)]
-    print('---------------- {} ----- {}'.format(minVal,maxVal))
     for item, value in processing.items():
         p = (processing[item]-minVal)/(maxVal-minVal)
         data["Themes"][item]["normalizedValue"] = p
         data["Themes"][item]["currDiff"] = getNextDiff(p,data["Themes"][item]["currDiff"])
-    print(data)
-    return data
+    with open(request.session['filePath']) as f:
+        dt = json.load(f)
+    dt.update(data)
+    with open(request.session['filePath'], 'w') as f:
+        json.dump(dt, f)
+    l = irtParams(request)
+    return l
+
+def irtParams(req):
+    res,resq = [],[]
+    p,q,al,b=0,0,0,0
+    with open(req.session['filePath']) as f:
+        data = json.load(f)
+    print(data['Results']['right'],data['Results']['wrong'])
+    al = data['Results']['right']+data['Results']['wrong']
+    p = data['Results']['right']/(al)
+    q = 1-p
+    th = math.log(p/q)
+    print('-------------УРОВЕНЬ ЗНАНИЙ')
+    print(th)
+    res.append({'X':data['Results']['right'],'p':p,'q':q,'q0':th,'q2':th**2})
+    for item in req.session['exclude']:
+        for k,v in item.items():
+            resq.append({'b0':v,'b2':v**2})
+
+    ath=1.2718427033479196
+    ab=1.1331282692461255
+    ths=0.4500327522525397
+    bs=-0.30451559227267
+    sth=0.5073209808147314
+    sb=1.3900144750457495
+
+    srq = [x['q0']*ath+bs for x in res]
+    print(res)
+    print(srq)
+    print(ath/math.sqrt(al*res[0]['p']*res[0]['q']))
+    return ath/math.sqrt(al*res[0]['p']*res[0]['q'])
