@@ -1,26 +1,69 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load staticfiles %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
 {% load mathfilters %}
 
 {% block content %}
 <div class="container">
-  <h1>Результаты</h1>
-  <h2>{{endFlag}}</h2>
-  <h3>Общая статистика:</h3>
-  Всего вопросов: {{ result.rightAnswers|add:result.wrongAnswers }} <br/>
-  Из них правильно: {{result.rightAnswers}} <br/>
-  Неправильно:  {{result.wrongAnswers}}<br/>
-  <br/>
-  <h3>Калибровочная часть:</h3>
-  Всего вопросов: {{result.calibRight|add:result.calibWrong}}</br>
-  Из них правильно: {{result.calibRight}}<br/>
-  Неправильно: {{result.calibWrong}}
-  <br/>
-  <h3>Основная часть:</h3>
-  Всего вопросов: {{result.mainRight|add:result.mainWrong}}</br>
-  Из них правильно: {{result.mainRight}}<br/>
-  Неправильно: {{result.mainWrong}}<br/>
+  <div class="alert alert-dismissible alert-success">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Удалено!</strong>
+  </div>
+  <div class="panel-group" id="accordion">
+    {% for question in questions %}
+    {% if question.complexity < 10 or question.complexity > 90  %}
+    <div id="{{ question.id }}" class="panel panel-default panel-warning">
+    {%else%}
+    <div id="{{ question.id }}" class="panel panel-default panel-primary">
+    {% endif %}
+       <div class="panel-heading">
+         <h4 class="panel-title">
+           <a data-toggle="collapse" data-parent="#collapse-group" href="#c{{ question.id }}">{{ question.questionName|truncatewords:3 }}</a>
+           <span onclick="$('#myPleaseWait').modal('show');" data-questtid="{{question.id}}" class="edit glyphicon glyphicon-zoom-in pull-right" style="margin-left: 10px;"></span>
+           <span data-questtid="{{question.id}}" class="remove-it glyphicon glyphicon-remove pull-right"></span>
+         </h4>
+       </div>
+       <div id="c{{ question.id }}" class="panel-collapse collapse">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-1">Вопрос:</div>
+            <div class="col-lg-10">{{question.questionName}}</div>
+          </div>
+          <div class="row">
+            <div class="col-md-1">%:</div>
+            <div class="col-lg-10">{{question.complexity|mul:100}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 
-  <a href="{% url 'tests:detailedReport' result.id%}">ПОДРОБНЫЙ ОТЧЁТ</a>
+  <div class="form-group">
+    <a onclick="$('#myPleaseWait').modal('show');" class="add btn btn-default">Добавить вопрос</a>
+  </div>
+  <div class="row">
+    <div class="col-md-5 col-md-offset-4">
+      {% bootstrap_pagination questions %}
+    </div>
+  </div>
+  <!-- Modal Start here-->
+  <div class="modal fade" id="myPleaseWait" tabindex="-1"
+      role="dialog" aria-hidden="true" data-backdrop="static">
+      <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">Вопрос</h4>
+            </div>
+            <div class="modal-body">
+            </div>
+          </div>
+      </div>
+  </div>
+  <!-- Modal ends Here -->
 </div>
 {% endblock %}

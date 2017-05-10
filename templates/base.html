@@ -1,5 +1,6 @@
 {% load staticfiles %}
 {% load i18n %}
+{% load students_extras %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,11 +23,16 @@
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="{% url 'details' %}">Личная страница</a></li>
                     <li><a href="{% url 'tests:usersTests' %}">Результаты</a></li>
-                    <li><a href="{% url 'tests:uploadFile' %}">Something else here</a></li>
+                    {% if user|has_group:"teachers" %}
+                      <li><a href="{% url 'tests:uploadFile' %}">Добавить тест</a></li>
+                    {% endif %}
+
                     <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
+                    <li><a href="{% url 'tests:myTests' %}">Тесты</a></li>
                     <li class="divider"></li>
-                    <li><a href="#">One more separated link</a></li>
+                    {% if user.is_staff %}
+                      <li><a href="{% url 'allUsers' %}">Все пользователи</a></li>
+                    {% endif %}
                   </ul>
                 </li>
                 <li><a href="{% url 'index' %}" class="btn btn-default">Домой</a></li>
@@ -63,6 +69,7 @@
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="{% static 'js/my-ajax.js' %}"></script>
 </body>
 
 </html>

@@ -13,7 +13,10 @@ def writeAnswers(req,question,sAnswers,rAnswers):
         'lvl': 0
     }
     for item in sAnswers:
-        toWrite['sAnswers'].append(Answer.objects.get(pk=item).answerText)
+        try:
+            toWrite['sAnswers'].append(Answer.objects.get(pk=item).answerText)
+        except ValueError:
+            toWrite['sAnswers'].append('Нет ответа')
     for item in rAnswers:
         toWrite['rAnswers'].append(Answer.objects.get(pk=item).answerText)
     toWrite['lvl'] = req.session['lvl']

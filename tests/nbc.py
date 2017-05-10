@@ -2,6 +2,7 @@ import numpy as np
 import json
 import glob, os
 import math
+import pprint
 
 from django.conf import settings
 from tests.models import Question, Answer
@@ -59,51 +60,65 @@ def updateValues(data,themeID,checkVal):
         data["Results"]["wrong"] += 1
     return data
 
-def setNextDiff(data,request):
+def setNextDiff(request):
+    data = request.session['testStatistic']
     numOfQuestions = data["Results"]["right"] + data["Results"]["wrong"]
+    rSum = []
     processing = {}
+    procc = []
+    remIt = False
+    if data["Results"]["right"] == 0:
+        remIt = True
+        data["Results"]["right"] = 0.1
     for item, value in data["Themes"].items():
-        processing[item] = (value["rightAnswers"]/data["Results"]["right"])*(data["Results"]["right"]/numOfQuestions)
+        #processing[item] = (value["rightAnswers"]/data["Results"]["right"])*(data["Results"]["right"]/numOfQuestions)
+        processing[item] = (value["rightAnswers"]/data["Results"]["right"])*(data["Results"]["right"]/numOfQuestions)/((value["rightAnswers"]+value["wrongAnswers"])/numOfQuestions)
+        #print("{} {} {} {} {}".format(processing[item],value["rightAnswers"],value["wrongAnswers"],data["Results"]["right"],numOfQuestions))
+        procc.append(processing[item])
     minVal = processing[min(processing, key=processing.get)]
     maxVal = processing[max(processing, key=processing.get)]
+    if remIt:
+        data["Results"]["right"] = 0
     for item, value in processing.items():
-        p = (processing[item]-minVal)/(maxVal-minVal)
+        p = value
+        rSum.append(p)
         data["Themes"][item]["normalizedValue"] = p
         data["Themes"][item]["currDiff"] = getNextDiff(p,data["Themes"][item]["currDiff"])
+    print(data['Themes'])
     with open(request.session['filePath']) as f:
         dt = json.load(f)
-    dt.update(data)
+    dt['Bayes'].append(data)
     with open(request.session['filePath'], 'w') as f:
         json.dump(dt, f)
-    l = irtParams(request)
-    return l
+    #l = irtParams(request)
+    return sum(rSum)/len(request.session['themeID'])
 
-def irtParams(req):
-    res,resq = [],[]
-    p,q,al,b=0,0,0,0
-    with open(req.session['filePath']) as f:
-        data = json.load(f)
-    print(data['Results']['right'],data['Results']['wrong'])
-    al = data['Results']['right']+data['Results']['wrong']
-    p = data['Results']['right']/(al)
-    q = 1-p
-    th = math.log(p/q)
-    print('-------------УРОВЕНЬ ЗНАНИЙ')
-    print(th)
-    res.append({'X':data['Results']['right'],'p':p,'q':q,'q0':th,'q2':th**2})
-    for item in req.session['exclude']:
-        for k,v in item.items():
-            resq.append({'b0':v,'b2':v**2})
-
-    ath=1.2718427033479196
-    ab=1.1331282692461255
-    ths=0.4500327522525397
-    bs=-0.30451559227267
-    sth=0.5073209808147314
-    sb=1.3900144750457495
-
-    srq = [x['q0']*ath+bs for x in res]
-    #print(res)
-    #print(srq)
-    print(ath/math.sqrt(al*res[0]['p']*res[0]['q']))
-    return srq[0]
+# def irtParams(req):
+#     res,resq = [],[]
+#     p,q,al,b=0,0,0,0
+#     with open(req.session['filePath']) as f:
+#         data = json.load(f)
+#     print(data['Results']['right'],data['Results']['wrong'])
+#     al = data['Results']['right']+data['Results']['wrong']
+#     p = data['Results']['right']/(al)
+#     q = 1-p
+#     th = math.log(p/q)
+#     print('-------------УРОВЕНЬ ЗНАНИЙ')
+#     print(th)
+#     res.append({'X':data['Results']['right'],'p':p,'q':q,'q0':th,'q2':th**2})
+#     for item in req.session['exclude']:
+#         for k,v in item.items():
+#             resq.append({'b0':v,'b2':v**2})
+#
+#     ath=1.2718427033479196
+#     ab=1.1331282692461255
+#     ths=0.4500327522525397
+#     bs=-0.30451559227267
+#     sth=0.5073209808147314
+#     sb=1.3900144750457495
+#
+#     srq = [x['q0']*ath+bs for x in res]
+#     #print(res)
+#     #print(srq)
+#     print(ath/math.sqrt(al*res[0]['p']*res[0]['q']))
+#     return srq[0]

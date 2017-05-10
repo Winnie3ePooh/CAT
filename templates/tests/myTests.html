@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="container">
+  <div class="alert alert-dismissible alert-success">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Удалено!</strong>
+  </div>
+  <div class="panel-group" id="accordion">
+    {% for test in userTests %}
+      <div id="{{ test.id }}" class="panel panel-primary">
+       <div class="panel-heading">
+         <h4 class="panel-title">
+           <a data-toggle="collapse" data-parent="#collapse-group" href="#c{{ test.id }}">{{ test.subjectName }}</a>
+         </h4>
+       </div>
+         <div id="c{{ test.id }}" class="panel-collapse collapse">
+          <div class="panel-body">
+           <a href="{% url 'tests:testDetails' test.id %}" class="btn btn-info" role="button">Просмотреть</a>
+           <button class="btn btn-warning delete" type="button" data-testid="{{test.id}}">Удалить</button>
+          </div>
+         </div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="pagination">
+    <span class="step-links">
+        {% if userTests.has_previous %}
+            <a href="?page={{ userTests.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ userTests.number }} of {{ userTests.paginator.num_pages }}.
+        </span>
+
+        {% if userTests.has_next %}
+            <a href="?page={{ userTests.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+  </div>
+
+</div>
+{% endblock %}

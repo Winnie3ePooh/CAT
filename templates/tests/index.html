@@ -3,10 +3,21 @@
 
 {% block content %}
 <div class="container">
-    <ul>
-        {% for sub in all_subjects %}
-            <li><a href="{% url 'tests:detailView' sub.id %}">{{ sub.subjectName }}</a></li>
-        {% endfor %}
-    </ul>
+  {% for disc in all_disciplines %}
+  <div class="panel panel-primary">
+   <div class="panel-heading">
+     <h4 class="panel-title">
+       <a data-toggle="collapse" data-parent="#collapse-group" href="#el1">{{disc.disciplineName}}</a>
+     </h4>
+   </div>
+     <div id="el1" class="panel-collapse collapse">
+       {% for sub in disc.subject_set.all %}
+         <div class="panel-body">
+           <li><a href="{% url 'tests:setInitialParams' sub.id %}">{{ sub.subjectName }}</a></li>
+         </div>
+       {% endfor %}
+     </div>
+  </div>
+  {% endfor %}
 </div>
 {% endblock %}

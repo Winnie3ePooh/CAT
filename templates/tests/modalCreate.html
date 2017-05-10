@@ -1,0 +1,25 @@
+{% load staticfiles %}
+{% load i18n %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#first" data-toggle="tab" aria-expanded="true">Вопрос</a></li>
+  <li class=""><a href="#second" data-toggle="tab">Ответы</a></li>
+</ul>
+<form id="post-form" action='{% url "tests:questionCreate" %}' method="post">
+  <div id="myTabContent" class="tab-content">
+      {% csrf_token %}
+    <div class="tab-pane fade active in" id="first">
+      {% bootstrap_form question layout='horizontal' %}
+    </div>
+      <br />
+    <div class="tab-pane fade" id="second">
+      {% bootstrap_formset answers layout='horizontal'%}
+    </div>
+    <div class="form-group">
+      <input class="update-submit btn btn-primary" type="submit" value="Submit data">
+    </div>
+  </div>
+</form>

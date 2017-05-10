@@ -1,12 +1,21 @@
 # coding: utf8
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 from django.views import generic
 from tests import nbc
 from tests import writeTest as wt
 from django.conf import settings
-from .forms import UploadFileForm
+from .forms import *
+from django.forms import *
+from django.template import RequestContext
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.contrib.auth.decorators import login_required
+from django.http import JsonResponse
+from django.template.loader import render_to_string
+from tests.models import *
+from django.views.decorators.csrf import csrf_protect
+
 
 import xml.etree.ElementTree as ET
 import numpy as np
@@ -15,51 +24,51 @@ import random
 import glob, os
 import math
 
-from tests.models import Subject, Question, Answer, Theme, Resutl
-
 DIFF = {
-    'Easy': [80,100],
-    'EasyMedium': [60,80],
-    'Medium': [40,60],
-    'MediumHard': [20,40],
-    'Hard':[0,20]
+    'Easy': [0.8,1],
+    'EasyMedium': [0.65,0.8],
+    'Medium': [0.4,0.65],
+    'MediumHard': [0.2,0.4],
+    'Hard':[0,0.2]
 }
 
 class IndexView(generic.ListView):
     template_name = 'tests/index.html'
-    context_object_name = 'all_subjects'
+    context_object_name = 'all_disciplines'
 
     def get_queryset(self):
-        return Subject.objects.order_by('subjectName')
+        return Discipline.objects.order_by('disciplineName')
+
 
 def usersTests(request):
-    results = Resutl.objects.all().filter(user=request.user)
+    results = Result.objects.all().filter(user=request.user)
     return render(request, 'tests/resultsView.html', {'results': results})
 
-def testDetails(request, resultsID):
-    result = Resutl.objects.get(pk=resultsID)
-    return render(request, 'tests/testDetails.html', {'result': result})
+def resultDetails(request, resultsID):
+    result = Result.objects.get(pk=resultsID)
+    return render(request, 'tests/resultDetails.html', {'result': result})
 
 def detailedReport(request, resultsID):
-    result = Resutl.objects.get(pk=resultsID)
+    result = Result.objects.get(pk=resultsID)
     with open(os.path.join(settings.MEDIA_ROOT,result.filePath)) as f:
         data = json.load(f)
-    return render(request, 'tests/detailedReport.html', {'data': data})
+    return render(request, 'tests/detailedReport.html', {'data': data['Answers']})
 
 
-def detailView(request, subjectID):
+def setInitialParams(request, subjectID):
     path = os.path.join(settings.MEDIA_ROOT,str(request.user))
     request.session['filePath'] = path+str(len(glob.glob(path+'*.json')))+'.json'
     with open(request.session['filePath'],'x') as f:
-        f.write('{"Answers":[]}')
+        f.write('{"Answers":[],"Bayes":[]}')
     request.session['flag'] = False
     request.session['calib'] = False
     request.session['subjectID'] = subjectID
-    return HttpResponseRedirect(reverse('tests:startTesting', args=(subjectID,)))
+    return HttpResponseRedirect(reverse('tests:startTesting'))
 
 
-def startTesting(request, subjectID):
+def startTesting(request):
     if not request.session['calib']:
+        subjectID = request.session['subjectID']
         currSubject  = Subject.objects.get(pk=subjectID)
         themeID = list(currSubject.theme_set.all().values_list('id',flat=True))
         testStatistic = {'Results': {'right': 0, 'wrong': 0},'Themes':{}}
@@ -76,9 +85,9 @@ def startTesting(request, subjectID):
         request.session['checkEnd'] = 0
         request.session['testName'] = currSubject.subjectName
         request.session['lvl'] = 0
-        checking = 0
+        request.session['checking'] = True
         for item in themeID:
-            request.session['calibQuest'].extend(list(Question.objects.filter(theme_id= item, complexity__range=DIFF['Medium']).values_list('id',flat=True).order_by('?')[:2]))
+            request.session['calibQuest'].extend(Question.objects.filter(theme_id= item, complexity__range=DIFF['Medium']).values_list('id',flat=True).order_by('?')[:3])
         #request.session['calibQuest'] = list(Question.objects.all().values_list('id',flat=True))
         request.session['score'] = 0
     if request.session['calibQuest']:
@@ -86,7 +95,6 @@ def startTesting(request, subjectID):
         questionID = listCopy.pop()
         #request.session['exclude'].append({questionID:''})
         request.session['excludeID'].append(questionID)
-        print(request.session['exclude'])
         request.session['calibQuest'] = listCopy
         question = Question.objects.get(pk=questionID)
         return render(request, 'tests/test.html', {'question': question})
@@ -96,39 +104,50 @@ def startTesting(request, subjectID):
         return HttpResponseRedirect(reverse('tests:getNextQuestion'))
 
 def getNextQuestion(request):
-    checking = nbc.setNextDiff(request.session['testStatistic'],request)
-    print(math.fabs((request.session['lvl']-checking)))
-    if math.fabs((request.session['lvl']-checking)) >= 0.08 and request.session['checkEnd'] != 4 and checking <2.4:
+    checking = nbc.setNextDiff(request)
+    print(checking)
+    #print(math.fabs((request.session['lvl']-checking)))
+    if  0.2 <= checking <= 0.6 and request.session['checkEnd'] <= 3 and math.fabs(checking-request.session['lvl']) >= 0.1:
         request.session['lvl'] = checking
-        themeID = str(random.choice(request.session['themeID']))
+        themeID = str(request.session['themeID'].pop())
         cmpl = DIFF[request.session['testStatistic']['Themes'][themeID]['currDiff']]
-        question = Question.objects.filter(theme_id = themeID, complexity__range = cmpl).exclude(pk__in = request.session['excludeID']).values()[:1]
+        # for item in request.session['themeID']:
+        #     diff = request.session['testStatistic']["Themes"][str(item)]["currDiff"]
+        #     request.session['calibQuest'].extend(Question.objects.filter(theme_id= item, complexity__range=DIFF[diff]).values_list('id',flat=True).order_by('?')[:1])
+        # request.session['calib'] = True
+        # subjectID = request.session.get('subjectID')
+        # return HttpResponseRedirect(reverse('tests:startTesting',args=(subjectID,)))
+        question = Question.objects.filter(theme_id = themeID, complexity__range = cmpl).exclude(pk__in = request.session['excludeID']).values().order_by('?')[:1]
+        request.session['themeID'].insert(0,themeID)
         if question:
             question = Question.objects.get(pk=question[0]['id'])
             return render(request, 'tests/test.html', {'question': question})
         else:
             return HttpResponseRedirect(reverse('tests:getNextQuestion'))
     else:
-        if math.fabs((request.session['lvl']-checking)) <= 0.08:
+        if checking >= 0.6:
             endFlag = 'Достигнут нужный уровень'
+        elif checking <= 0.2:
+            endFlag = 'Ну вообще'
         else:
-            endFlag = 'Допущено 5 подряд ошибок'
+            endFlag = 'Допущено {} подряд ошибок'.format(request.session['checkEnd'])
         res = request.session['testStatistic']['Results']
-        result = Resutl(user=request.user,name=request.session['testName'],
+        result = Result(user=request.user,name=request.session['testName'],
                         filePath=request.session['filePath'].split('\\')[-1],
                         rightAnswers=res['right'],wrongAnswers=res['wrong'],
-                        calibRight=request.session['calibStatistic']['right'],calibWrong=request.session['calibStatistic']['wrong'],
-                        mainRight=request.session['mainStatistic']['Results']['right'],mainWrong=request.session['mainStatistic']['Results']['wrong'],
-                        score=res['right']+res['wrong'])
+                        isVisible=True)
         result.save()
         return render(request, 'tests/results.html',{'results': result,'main': request.session['mainStatistic']['Results'],'calib':request.session['calibStatistic'],'endFlag':endFlag})
 
-def studentAnswer(request, themeID, questionID, cmplty):
+def studentAnswer(request, themeID, questionID):
     request.POST = request.POST.copy()
-    studAnswer = request.POST.pop('answer')
-    studAnswer = [int(s) for s in studAnswer]
-    check = False
     if request.method == 'POST':
+        try:
+            studAnswer = request.POST.pop('answer')
+            studAnswer = [int(s) for s in studAnswer]
+        except KeyError:
+            studAnswer = ['']
+        check = False
         currQuestion = Question.objects.get(pk=questionID)
         rightAnswers = list(currQuestion.answer_set.all().filter(isRight = True).values_list('id',flat=True).order_by('?'))
         wt.writeAnswers(request,currQuestion,studAnswer,rightAnswers)
@@ -143,26 +162,155 @@ def studentAnswer(request, themeID, questionID, cmplty):
         pj = currQuestion.right/(currQuestion.right+currQuestion.wrong)
         #request.session['exclude'][-1][currQuestion.id] = math.log((1-pj)/pj)
         request.session['exclude'].append({currQuestion.id:math.log((1-pj)/pj)})
+        request.session['excludeID'].append(questionID)
         currQuestion.save()
-        if request.session['calib']:
-            return HttpResponseRedirect(reverse('tests:startTesting',args=(subjectID,)))
+        if check:
+            #request.session['score'] += 4*(100-round(float(cmplty)))/100
+            request.session['checkEnd'] = 0
+            request.session['mainStatistic']['Results']['right'] += 1
         else:
-            if check:
-                request.session['score'] += 4*(100-round(float(cmplty)))/100
-                request.session['checkEnd'] = 0
-                request.session['mainStatistic']['Results']['right'] += 1
-            else:
-                request.session['checkEnd'] += 1
-                request.session['mainStatistic']['Results']['wrong'] += 1
+            request.session['checkEnd'] += 1
+            request.session['mainStatistic']['Results']['wrong'] += 1
+        if request.session['calib']:
+            return HttpResponseRedirect(reverse('tests:startTesting'))
+        else:
             return HttpResponseRedirect(reverse('tests:getNextQuestion'))
 
 def uploadFile(request):
     if request.method == 'POST':
-        form = UploadFileForm(request.POST, request.FILES)
-        if form.is_valid():
-            print(request.FILES['file'])
-            #handle_uploaded_file(request.FILES['file'])
-            return HttpResponseRedirect('/students/')
+        uploadForm = UploadFileForm(request.POST, request.FILES)
+        if uploadForm.is_valid():
+            try:
+                os.mkdir(os.path.join(settings.MEDIA_ROOT, request.user.username))
+            except:
+                pass
+            currPath = os.path.join(settings.MEDIA_ROOT, request.user.username,request.FILES['file'].name)
+            with open(currPath, 'wb+') as destination:
+                for chunk in request.FILES['file'].chunks():
+                    destination.write(chunk)
+            processingTestsFile(currPath,request)
+            return HttpResponseRedirect('/')
     else:
-        form = UploadFileForm()
-    return render(request, 'tests/upload.html', {'form': form})
+        uploadForm = UploadFileForm()
+    return render(request, 'tests/upload.html', {'uploadForm': uploadForm})
+
+def myTests(request):
+    user_tests = Subject.objects.all().filter(user=request.user).order_by('subjectName')
+    paginator = Paginator(user_tests, 10) # Show 25 contacts per page
+
+    page = request.GET.get('page')
+    try:
+        userTests = paginator.page(page)
+    except PageNotAnInteger:
+        userTests = paginator.page(1)
+    except EmptyPage:
+        userTests = paginator.page(paginator.num_pages)
+    return render(request, 'tests/myTests.html', {'userTests': userTests})
+
+def testDetails(request, testID):
+    request.session['testID'] = testID
+    subject = Subject.objects.get(pk=testID)
+    themesIDs = subject.theme_set.all()
+    testsQuestions = Question.objects.all().filter(theme__in=themesIDs).order_by('theme')
+    paginator = Paginator(testsQuestions, 10) # Show 25 contacts per page
+
+    page = request.GET.get('page')
+    try:
+        questions = paginator.page(page)
+    except PageNotAnInteger:
+        questions = paginator.page(1)
+    except EmptyPage:
+        questions = paginator.page(paginator.num_pages)
+    return render(request, 'tests/testDetails.html', {'questions': questions})
+
+def deleteTest(request):
+    if request.method == 'GET':
+        print(request.GET['test_id'])
+        subject = Subject.objects.get(pk=request.GET['test_id'])
+        subject.delete()
+        data = {
+            'rdy': True
+        }
+        return JsonResponse(data)
+
+def questionCreate(request):
+
+    question = Question()
+    answersFormSet = inlineformset_factory(Question,Answer, form=AnswerForm,extra=5, can_delete=True)
+
+    if request.method == 'POST':
+        tuf = QuestionForm(request.POST, request.FILES,instance=question, prefix="main")
+        formset = answersFormSet(request.POST, request.FILES, instance=question, prefix="nested")
+        if tuf.is_valid() and formset.is_valid():
+            tuf.save()
+            formset.save()
+            return HttpResponseRedirect(reverse('tests:testDetails',args=(request.session['testID'],)))
+        else:
+            return HttpResponse(404)
+    else:
+        tuf = QuestionForm(instance=question, prefix="main")
+        formset = answersFormSet(instance=question,prefix="nested")
+        form  = render_to_string('tests/modalCreate.html',{'question':tuf,'answers':formset},request)
+
+    return HttpResponse(form)
+
+def questionEdit(request):
+    if not request.method=='POST':
+        try:
+            del request.session['questionID']
+        except KeyError:
+            pass
+    try:
+        questionID = request.session['questionID']
+    except KeyError:
+        questionID = request.GET['questionID']
+
+    question = get_object_or_404(Question, pk=int(questionID))
+    answersFormSet = inlineformset_factory(Question,Answer, form=AnswerForm,extra=4, can_delete=True)
+    if request.method == 'POST':
+        tuf = QuestionForm(request.POST, request.FILES,instance=question, prefix="main")
+        formset = answersFormSet(request.POST, request.FILES, instance=question, prefix="nested")
+        if tuf.is_valid() and formset.is_valid():
+            tuf.save()
+            formset.save()
+            return HttpResponseRedirect(reverse('tests:testDetails',args=(request.session['testID'],)))
+        else:
+            return HttpResponse(404)
+    else:
+        tuf = QuestionForm(instance=question, prefix="main")
+        formset = answersFormSet(instance=question,prefix="nested")
+        form  = render_to_string('tests/modalUpdate.html',{'question':tuf,'answers':formset},request)
+        request.session['questionID'] = request.GET['questionID']
+
+    return HttpResponse(form)
+
+def questionDelete(request):
+    questionID = request.GET['questionID']
+    question = get_object_or_404(Question, pk=int(questionID))
+    question.delete()
+    data = {
+        'rdy': True
+    }
+    return JsonResponse(data)
+
+def processingTestsFile(fPath,request):
+    themes=[]
+    root = ET.parse(fPath).getroot()
+    for name in root.iter('name'):
+        subj = Subject(subjectName=name.text,user=request.user)
+        subj.save()
+
+    for child in root.iter('theme'):
+        theme = Theme(themeName=child.text, subject=subj)
+        theme.save()
+        themes.append(theme)
+
+    for child in root.iter('question'):
+        quest = Question(questionName=child[0].text, theme=themes[int(child.get('theme'))])
+        quest.save()
+        for ans in child[1].iter('answer'):
+            if ans.get('isCorrect') == '1':
+                answer = Answer(answerText=ans.text, isRight = True, question=quest)
+            else:
+                answer = Answer(answerText=ans.text, isRight = False, question=quest)
+            answer.save()

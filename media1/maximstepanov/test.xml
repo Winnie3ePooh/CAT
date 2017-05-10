@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geetest>
+<test>
+
+<name>﻿Основы программирования. Pascal.</name>
+<give>Основам программирования. Pascal.
+</give>
+<category>Информатика</category>
+<isThemes>0</isThemes>
+<description></description>
+
+<questions>
+	<question theme="0" answer="1">
+		<text>
+		Когда необходимо составлять блок-схему программы?
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">До начала составления самой программы</answer>
+			<answer id="2" isCorrect="0">После составления программы</answer>
+			<answer id="3" isCorrect="0">В процессе составления программы</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Наиболее наглядной формой описания алгоритма является структурно-стилизованный метод
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">представление алгоритма в виде схемы</answer>
+			<answer id="2" isCorrect="0">язык программирования высокого уровня</answer>
+			<answer id="3" isCorrect="0">словесное описание алгоритма</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="3">
+		<text>
+		Перевод программ с языка высокого уровня на язык более низкого уровня  обеспечивает программа -
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">ассемблер</answer>
+			<answer id="2" isCorrect="0">паскаль</answer>
+			<answer id="3" isCorrect="1">компилятор</answer>
+			<answer id="4" isCorrect="0">фортран</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="3">
+		<text>
+		В графических схемах алгоритмов стрелки направлений на линиях потоков
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">необходимо рисовать, если направление потока сверху вниз и слева направо</answer>
+			<answer id="2" isCorrect="0">рисовать не нужно</answer>
+			<answer id="3" isCorrect="1">необходимо рисовать, если направление потока снизу вверх и справа налево</answer>
+			<answer id="4" isCorrect="0">можно рисовать или не рисовать</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="4">
+		<text>
+		Разработка алгоритма решения задачи – это
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">сведение задачи к математической модели, для которой известен метод решения</answer>
+			<answer id="2" isCorrect="0">выбор наилучшего метода из имеющихся</answer>
+			<answer id="3" isCorrect="0">точное описание данных, условий задачи и ее целого решения</answer>
+			<answer id="4" isCorrect="1">определение последовательности действий, ведущих к получению результатов</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="3">
+		<text>
+		Языком высокого уровня является
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">Макроассемблер</answer>
+			<answer id="2" isCorrect="0">Шестнадцатеричный язык</answer>
+			<answer id="3" isCorrect="1">Фортран</answer>
+			<answer id="4" isCorrect="0">Ассемблер</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Алгоритм, в котором действия выполняются друг за другом, не повторяясь называется:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">линейным</answer>
+			<answer id="2" isCorrect="0">циклическим</answer>
+			<answer id="3" isCorrect="0">разветвленным</answer>
+			<answer id="4" isCorrect="0">простым</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="2">
+		<text>
+		Разработке алгоритма предшествует
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">постановка задачи, разработка математической модели, проектирование программ</answer>
+			<answer id="2" isCorrect="1">постановка задачи, разработка математической модели</answer>
+			<answer id="3" isCorrect="0">постановка задачи, выбор метода решения, проектирование программ</answer>
+			<answer id="4" isCorrect="0">постановка задачи, разработка математической модели, выбор метода решения</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Символьный тип данных объявляется служебным словом:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">CHAR;</answer>
+			<answer id="2" isCorrect="0">STRING;</answer>
+			<answer id="3" isCorrect="0">BYTE;</answer>
+			<answer id="4" isCorrect="0">WORD;</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		В операторе присваивания summa := sqr(x)+3*a  переменными являются
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">a, x, summa</answer>
+			<answer id="2" isCorrect="0">x, a</answer>
+			<answer id="3" isCorrect="0">sqr,x,a</answer>
+			<answer id="4" isCorrect="0">summa, sqr, x, a</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="2">
+		<text>
+		Процедура INC(x,k)
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">преобразует десятичное число х в строку из k символов</answer>
+			<answer id="2" isCorrect="1">увеличивает значение переменной х на величину k</answer>
+			<answer id="3" isCorrect="0">уменьшает значение переменной х на величину k</answer>
+			<answer id="4" isCorrect="0">преобразует строку символов x в число, содержащее k десятичных знаков</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="2">
+		<text>
+		Записью действительного числа с плавающей точкой является
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">–1.0533333</answer>
+			<answer id="2" isCorrect="1">1.0E01</answer>
+			<answer id="3" isCorrect="0">48.0001</answer>
+			<answer id="4" isCorrect="0">220.11</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="2">
+		<text>
+		Вещественный тип данных объявляется служебным словом:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">INTEGER</answer>
+			<answer id="2" isCorrect="1">REAL</answer>
+			<answer id="3" isCorrect="0">LONGINT</answer>
+			<answer id="4" isCorrect="0">SHORTINT</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Оператор цикла  с постусловием
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">Repeat… until</answer>
+			<answer id="2" isCorrect="0">While…do</answer>
+			<answer id="3" isCorrect="0">For … to…do</answer>
+			<answer id="4" isCorrect="0">For…downto…do</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Логический тип данных объявляется служебным словом:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">BOOLEAN</answer>
+			<answer id="2" isCorrect="0">LOGIC</answer>
+			<answer id="3" isCorrect="0">BYTE</answer>
+			<answer id="4" isCorrect="0">IF</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="3">
+		<text>
+		Раздел переменных определяется служебным словом:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">LABEL</answer>
+			<answer id="2" isCorrect="0">TYPE</answer>
+			<answer id="3" isCorrect="1">VAR</answer>
+			<answer id="4" isCorrect="0">ARRAY</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		В языке Паскаль пустой оператор помечаться
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">может</answer>
+			<answer id="2" isCorrect="0">может, но в исключительных ситуациях</answer>
+			<answer id="3" isCorrect="0">пустых операторов не бывает</answer>
+			<answer id="4" isCorrect="0">не может</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="2">
+		<text>
+		Раздел типов определяется служебным словом:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">LABEL</answer>
+			<answer id="2" isCorrect="1">TYPE</answer>
+			<answer id="3" isCorrect="0">VAR</answer>
+			<answer id="4" isCorrect="0">BEGIN</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="2">
+		<text>
+		Какие из приведенных типов данных относятся к целочисленному типу данных?
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">integer, real</answer>
+			<answer id="2" isCorrect="1">integer, word, longint</answer>
+			<answer id="3" isCorrect="0">comp, double</answer>
+			<answer id="4" isCorrect="0">single, extended</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Из приведенных операторов описания переменных неправильно объявлены переменные
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">VAR f,g,d,t:INTEGER;I,t:REAL</answer>
+			<answer id="2" isCorrect="0">var a,b:real;c:real</answer>
+			<answer id="3" isCorrect="0">var I,j,max,min: real</answer>
+			<answer id="4" isCorrect="0">var a,b,c,d:real; I,j,k:integer</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="4">
+		<text>
+		Какие из приведенных типов данных относятся к вещественному типу данных?
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">byte, real</answer>
+			<answer id="2" isCorrect="0">shortint</answer>
+			<answer id="3" isCorrect="0">word, double</answer>
+			<answer id="4" isCorrect="1">real, single, extended</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="4">
+		<text>
+		Для вычисления экспоненты применяется процедура:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">ORD(X)</answer>
+			<answer id="2" isCorrect="0">SQR(X)</answer>
+			<answer id="3" isCorrect="0">TRUNC(X)</answer>
+			<answer id="4" isCorrect="1">EXP(X)</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Результатом выполнения фрагмента программы S:=-5;x:=0;repeat s:=s*(x+2);x:=x+1;  until x&lt;2;write(s); будет сообщение
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">-10.0</answer>
+			<answer id="2" isCorrect="0">-30.0</answer>
+			<answer id="3" isCorrect="0">0.0</answer>
+			<answer id="4" isCorrect="0">-120.0</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="4">
+		<text>
+		Для возведения в квадрат применяется функция:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">LN(X)</answer>
+			<answer id="2" isCorrect="0">LOG(X)</answer>
+			<answer id="3" isCorrect="0">SQRT(X)</answer>
+			<answer id="4" isCorrect="1">SQR(X)</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="2">
+		<text>
+		Для вычисления квадратного корня применяется функция:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">SQR(X)</answer>
+			<answer id="2" isCorrect="1">SQRT(X)</answer>
+			<answer id="3" isCorrect="0">ORD(X)</answer>
+			<answer id="4" isCorrect="0">EXP(X)</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Раздел констант объявляется служебным словом:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">CONST</answer>
+			<answer id="2" isCorrect="0">KONST</answer>
+			<answer id="3" isCorrect="0">CONCT</answer>
+			<answer id="4" isCorrect="0">VAR</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Имеется логическое выражение (x*x + y*y) &lt;= 1;
+Для какой области на плоскости это выражение будет иметь  значение TRUE?
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">Для круга единичного радиуса</answer>
+			<answer id="2" isCorrect="0">Для точек, расположенных вне круга с единичным радиусом</answer>
+			<answer id="3" isCorrect="0">Для точек плоскости, расположенных внутри квадрата с единичными сторонами</answer>
+			<answer id="4" isCorrect="0">Для точек плоскости, расположенных вне квадрата с единичными  сторонами</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="2">
+		<text>
+		Укажите правильную запись вычисления функции в виде одного условного оператора:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">if 0&lt;x&lt;2 then y:=cos(x) else y:=1-sin(x)</answer>
+			<answer id="2" isCorrect="1">if (0&lt;x) and (x&lt;2) then y:=cos(2*x) else y:=1-sin(3*x)</answer>
+			<answer id="3" isCorrect="0">if (0&lt;x) and (x&lt;2) then y:=cos(2x) else y:=1-sin(3x)</answer>
+			<answer id="4" isCorrect="0">if (0&lt;x) or (x&lt;2) then y:=cos(x) else y:=1-sin(x)</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="2">
+		<text>
+		Укажите неправильно записанный оператор:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">if a&lt;b then a:=a*a else b:=b*b;</answer>
+			<answer id="2" isCorrect="1">if x and y then s:=s+1; else s:=s-1;</answer>
+			<answer id="3" isCorrect="0">if k&lt;&gt;m then k:=m;</answer>
+			<answer id="4" isCorrect="0">if (a&lt;b) or c then c:=false.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="2">
+		<text>
+		Цикл с предусловием определяется служебным словом:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">FOR;</answer>
+			<answer id="2" isCorrect="1">WHILE;</answer>
+			<answer id="3" isCorrect="0">REPEAT;</answer>
+			<answer id="4" isCorrect="0">IF.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="4">
+		<text>
+		Цикл с постусловием определяется служебным словом:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">FOR;</answer>
+			<answer id="2" isCorrect="0">WHILE;</answer>
+			<answer id="3" isCorrect="0">CASE;</answer>
+			<answer id="4" isCorrect="1">REPEAT;</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Если в цикле с параметром: 
+                   for i:= A to B do S;
+       значение B меньше, чем значение A, то ...
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">оператор S не выполняется ни разу;</answer>
+			<answer id="2" isCorrect="0">оператор S выполняется один раз.</answer>
+			<answer id="3" isCorrect="0">оператор S выполняется B-A раз.</answer>
+			<answer id="4" isCorrect="0">оператор S выполняется B-A+1 раз.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Если в цикле с параметром:
+      for i:= A downto B do S;
+значение B больше, чем значение A, то ...
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">оператор S не выполняется ни разу;</answer>
+			<answer id="2" isCorrect="0">оператор S выполняется один раз.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="">
+		<text>
+		Можно ли в цикле for... задать  шаг изменения параметра цикла отличный от 1 или -1 ?
++ нельзя;
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">можно, добавив слово step и величину шага;</answer>
+			<answer id="2" isCorrect="0">можно, включив в тело цикла выражение вида i:=i+шаг, где i - параметр цикла.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Укажите оператор цикла –ДО с параметром:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">for ... to ... do;</answer>
+			<answer id="2" isCorrect="0">while ... do;</answer>
+			<answer id="3" isCorrect="0">repeat ... until.</answer>
+			<answer id="4" isCorrect="0">case …of …else…end</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="2">
+		<text>
+		В операторе цикла с предусловием:
+          while B do A;
+       при B = FALSE оператор A ...
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">выполняется один раз;</answer>
+			<answer id="2" isCorrect="1">не выполняется ни разу;</answer>
+			<answer id="3" isCorrect="0">выполняется до тех пор, пока  B не равно  TRUE.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="3">
+		<text>
+		Определить результат работы следующего фрагмента программы
+k:=6; for i:=1 to 5 do inc(k); write(k,’ ‘);
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">7 8 9 10 11</answer>
+			<answer id="2" isCorrect="0">11</answer>
+			<answer id="3" isCorrect="1">6</answer>
+			<answer id="4" isCorrect="0">1 2 3 4 5</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="4">
+		<text>
+		При выполнении последовательности операторов А:=4; B:=2; X:=A mod B значение переменной Х равно:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">выражение записано неверно</answer>
+			<answer id="2" isCorrect="0">8</answer>
+			<answer id="3" isCorrect="0">операция невыполнима, так как деление на 0 невозможно</answer>
+			<answer id="4" isCorrect="1">2</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="3">
+		<text>
+		В результате выполнения последовательности операторов x:=sqr(2); y:=sqrt(4)-abs(-2); write(x,’  ‘, y) на экране будет выведено:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">0   -1</answer>
+			<answer id="2" isCorrect="0">4  6</answer>
+			<answer id="3" isCorrect="1">4  0</answer>
+			<answer id="4" isCorrect="0">1  0</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Определить результат работы следующего фрагмента программы
+k:=6; for i:=1 to 5 do begin inc(k); write(k,’ ‘) end;
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">7 8 9 10 11</answer>
+			<answer id="2" isCorrect="0">11</answer>
+			<answer id="3" isCorrect="0">6</answer>
+			<answer id="4" isCorrect="0">1 2 3 4 5</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="3">
+		<text>
+		Неверно записано описание переменных:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">VAR A,B:real; I,J:integer;</answer>
+			<answer id="2" isCorrect="0">VAR j,g,t:integer; i:real;</answer>
+			<answer id="3" isCorrect="1">VAR i,max:integer; a,max:real;</answer>
+			<answer id="4" isCorrect="0">VAR a,b:real; c,d:real;</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="4">
+		<text>
+		При выполнении последовательности операторов a:=1.0; b:=3; x:=(a+b)/a*b-a; значение переменной х равно:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">2</answer>
+			<answer id="2" isCorrect="0">1</answer>
+			<answer id="3" isCorrect="0">0.3333</answer>
+			<answer id="4" isCorrect="1">11</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		В Паскале различие в высоте букв (прописные или строчные)
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">имеет значение при написании текстовых констант</answer>
+			<answer id="2" isCorrect="0">имеет значение для написания служебных слов</answer>
+			<answer id="3" isCorrect="0">имеет значение для написания имен переменных</answer>
+			<answer id="4" isCorrect="0">игнорируется</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Имеется описание заголовка процедуры:
+procedure proba(var a, b, c:integer);
+При использовании процедуры с таким заголовком значения фактических параметров передаются ...
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">по ссылке;</answer>
+			<answer id="2" isCorrect="0">по значению.</answer>
+			<answer id="3" isCorrect="0">как константа</answer>
+			<answer id="4" isCorrect="0">как процедура</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="2">
+		<text>
+		Имеется описание заголовка процедуры: 
+procedure proba(a, b, c:integer);
+При использовании процедуры с таким заголовком значения фактических параметров передаются ...
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">по ссылке;</answer>
+			<answer id="2" isCorrect="1">по значению</answer>
+			<answer id="3" isCorrect="0">как константа</answer>
+			<answer id="4" isCorrect="0">как процедура</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="4">
+		<text>
+		Какое выражение неверно?
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">Структура подпрограммы аналогична структуре основной программы</answer>
+			<answer id="2" isCorrect="0">Подпрограмма предназначена для выполнения  какой-то последовательности действий</answer>
+			<answer id="3" isCorrect="0">В Паскале имеется две разновидности подпрограмм – процедуры и функции</answer>
+			<answer id="4" isCorrect="1">В подпрограмме нельзя использовать глобальные переменные</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="3">
+		<text>
+		Подпрограммы располагаются в разделе описания...?
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">переменных</answer>
+			<answer id="2" isCorrect="0">типов</answer>
+			<answer id="3" isCorrect="1">процедур и функций</answer>
+			<answer id="4" isCorrect="0">меток</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="4">
+		<text>
+		Каких параметров подпрограммы не существует?
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">параметров-переменных</answer>
+			<answer id="2" isCorrect="0">параметров-констант</answer>
+			<answer id="3" isCorrect="0">параметров-значений</answer>
+			<answer id="4" isCorrect="1">параметров-модулей</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="4">
+		<text>
+		Как называются имена, представленные в разделе описаний основной программы?
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">формальными</answer>
+			<answer id="2" isCorrect="0">параметрами-константами</answer>
+			<answer id="3" isCorrect="0">локальными</answer>
+			<answer id="4" isCorrect="1">глобальными</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="2">
+		<text>
+		Какие виды подпрограмм есть в Паскале?
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">модуль и функция</answer>
+			<answer id="2" isCorrect="1">процедура и функция</answer>
+			<answer id="3" isCorrect="0">модуль и процедура</answer>
+			<answer id="4" isCorrect="0">процедура</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="4">
+		<text>
+		Где правильно описана процедура?
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">PROCEDURA (a:array [1..10] of integer: b:real)</answer>
+			<answer id="2" isCorrect="0">PROSEDURA (var a:array [1..10] of integer; b:real)</answer>
+			<answer id="3" isCorrect="0">PROSEDURA (a:array of integer; b:real)</answer>
+			<answer id="4" isCorrect="1">PROCEDURE (a:array of integer; var b:real)</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="2">
+		<text>
+		Какое служебное слово указывается в заголовке процедуры?
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">BEGIN</answer>
+			<answer id="2" isCorrect="1">PROCEDURE</answer>
+			<answer id="3" isCorrect="0">FUNCTION</answer>
+			<answer id="4" isCorrect="0">PROCEDURA</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="2">
+		<text>
+		Какие объекты можно использовать в качестве формальных параметров в процедуре?
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">константы, переменные, выражения</answer>
+			<answer id="2" isCorrect="1">переменные с указанием их типа</answer>
+			<answer id="3" isCorrect="0">выражения, константы</answer>
+			<answer id="4" isCorrect="0">типизированные константы</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="4">
+		<text>
+		Что представляют собой фактические параметры?
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">константы, переменные, выражения с указанием их типа</answer>
+			<answer id="2" isCorrect="0">переменные с указанием их типа</answer>
+			<answer id="3" isCorrect="0">выражения, константы</answer>
+			<answer id="4" isCorrect="1">константы, переменные, выражения без указания типа</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Каким символом разделяются перечень однотипных формальных параметров в процедуре?
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">запятой</answer>
+			<answer id="2" isCorrect="0">точкой с запятой</answer>
+			<answer id="3" isCorrect="0">двоеточием</answer>
+			<answer id="4" isCorrect="0">точкой</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="2">
+		<text>
+		Каким символом разделяются перечень разнотипных формальных параметров в процедуре?
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">запятой</answer>
+			<answer id="2" isCorrect="1">точкой с запятой</answer>
+			<answer id="3" isCorrect="0">двоеточием</answer>
+			<answer id="4" isCorrect="0">точкой</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="2">
+		<text>
+		Где правильно описана функция?
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">FUNCTION (a,b,c:real):integer;</answer>
+			<answer id="2" isCorrect="1">FUNCTION Faktor (a:integer):integer;</answer>
+			<answer id="3" isCorrect="0">FYNCTION Sum (a,b,c:real):integer;</answer>
+			<answer id="4" isCorrect="0">FUNKTION A(a,b,c:real): integer;</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="2">
+		<text>
+		Укажите правильное обращение к процедуре, объявленной  как:
+Procedure Tangens(f:real; var t:real);
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">tangens (3.14,t,k);</answer>
+			<answer id="2" isCorrect="1">tangens(pi/2,t);</answer>
+			<answer id="3" isCorrect="0">tangens(a,3.14);</answer>
+			<answer id="4" isCorrect="0">tangen(pi/6,t);</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="3">
+		<text>
+		Укажите правильный вызов процедуры 
+Procedure LOG10(Argument:Real; var LOG:real);
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">LOG10(x,2.3);</answer>
+			<answer id="2" isCorrect="0">LOG10(x,2*y);</answer>
+			<answer id="3" isCorrect="1">LOG10(1.5,y);</answer>
+			<answer id="4" isCorrect="0">LOG10(x,y,z);</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Длину строки можно определить с помощью процедуры:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">LENGTH;</answer>
+			<answer id="2" isCorrect="0">ORD;</answer>
+			<answer id="3" isCorrect="0">CHR;</answer>
+			<answer id="4" isCorrect="0">RECORD;</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Переменная строкового типа обозначается идентификатором
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">string;</answer>
+			<answer id="2" isCorrect="0">word;</answer>
+			<answer id="3" isCorrect="0">char;</answer>
+			<answer id="4" isCorrect="0">byte;</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="3">
+		<text>
+		Строки программы в Турбо Паскале имеют максимальную длину:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">80 символов;</answer>
+			<answer id="2" isCorrect="0">126 символов;</answer>
+			<answer id="3" isCorrect="1">256 символов;</answer>
+			<answer id="4" isCorrect="0">512 символов.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="3">
+		<text>
+		Какой из примеров записан правильно?
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">var y = array [1..10] of integer.</answer>
+			<answer id="2" isCorrect="0">var y : array (1..10) of integer;</answer>
+			<answer id="3" isCorrect="1">var y : array [1..10] of integer;</answer>
+			<answer id="4" isCorrect="0">type y = array (1..10) of integer.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="2">
+		<text>
+		Какие данные могут выступать в качестве индекса?
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">вещественные типы данных</answer>
+			<answer id="2" isCorrect="1">константы и переменные порядковых типов</answer>
+			<answer id="3" isCorrect="0">операторы</answer>
+			<answer id="4" isCorrect="0">целые типы данных</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Какие данные не могут выступать в качестве индекса?
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">вещественные типы данных</answer>
+			<answer id="2" isCorrect="0">константы и переменные порядковых типов</answer>
+			<answer id="3" isCorrect="0">тип-диапазон</answer>
+			<answer id="4" isCorrect="0">целые типы данных</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Выберите правильную операцию отношения так, чтобы следующее условие принимало значение True:  ‘balkon’ ? ‘balken’
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">&gt;</answer>
+			<answer id="2" isCorrect="0">&lt;</answer>
+			<answer id="3" isCorrect="0">=</answer>
+			<answer id="4" isCorrect="0">&lt;=</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="4">
+		<text>
+		Что появится на экране в результате выполнения следующих операторов:
+ws:=’электрификация’;
+sw:=’тр’; p:=pos(sw,ws); write(p:2);
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">1</answer>
+			<answer id="2" isCorrect="0">3</answer>
+			<answer id="3" isCorrect="0">и</answer>
+			<answer id="4" isCorrect="1">5</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		ORD(Х) – функция, которая …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">возвращает порядковый номер значения выражения Х</answer>
+			<answer id="2" isCorrect="0">возвращает следующее значение порядкового типа</answer>
+			<answer id="3" isCorrect="0">возвращает символ в верхнем регистре</answer>
+			<answer id="4" isCorrect="0">преобразует выражение Х  в символ</answer>
+		</answers>
+	</question>
+</questions>
+</test>
+</geetest>
+

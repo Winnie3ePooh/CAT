@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load mathfilters %}
+
+{% block content %}
+<div class="container">
+  <h1>Результаты</h1>
+  <h2>{{endFlag}}</h2>
+  <h3>Общая статистика:</h3>
+  Всего вопросов: {{ result.rightAnswers|add:result.wrongAnswers }} <br/>
+  Из них правильно: {{result.rightAnswers}} <br/>
+  Неправильно:  {{result.wrongAnswers}}<br/>
+  <br/>
+
+  <a class="btn btn-info" href="{% url 'tests:detailedReport' result.id%}">Подробно</a>
+</div>
+{% endblock %}

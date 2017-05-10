@@ -1,0 +1,1989 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trees>
+<themes>
+	<theme id="0">Фундаментальные основы информатики</theme>
+	<theme id="1">История развития и классификация ЭВМ</theme>
+	<theme id="2">Представление информации в ЭВМ</theme>
+	<theme id="3">Основы конструкции ЭВМ</theme>
+	<theme id="4">Операционные системы ЭВМ</theme>
+	<theme id="5">Основы алгоритмизации и языки программирования</theme>
+	<theme id="6">Прикладное программное обеспечение.</theme>
+	<theme id="7">Вычислительные системы и сети</theme>
+</themes>
+
+<questions>
+	<question theme="0" answer="1">
+		<text>
+		Информационным называется общество, где:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">большинство работающих занято производством, хранением, переработкой и реализацией информации, особенно ее высшей формы — знаний</answer>
+			<answer id="2" isCorrect="0">персональные компьютеры широко используются во всех сферах 
+деятельности</answer>
+			<answer id="3" isCorrect="0">обработка информации производится с использованием ЭВМ.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="2">
+		<text>
+		Информатизация общества — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">процесс повсеместного распространения вычислительной техники</answer>
+			<answer id="2" isCorrect="1">организованный социально-экономический и научно-технический процесс создания оптимальных условий для удовлетворения информационных потребностей и реализации прав граждан, органов государственной власти, органов местного самоуправления, организаций на основе формирования и использования информационных ресурсов с помощью средств вычислительной техники</answer>
+			<answer id="3" isCorrect="0">процесс внедрения новых информационных технологий.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Компьютеризация общества — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">процесс развития и внедрения технической базы компьютеров, обеспечивающий оперативное получение результатов переработки информации</answer>
+			<answer id="2" isCorrect="0">комплекс мер, направленных на обеспечение полного использования достоверного и непрерывного знания во всех сферах деятельности</answer>
+			<answer id="3" isCorrect="0">процесс замены больших ЭВМ на микро-ЭВМ.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="3">
+		<text>
+		Информационная культура общества предполагает:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">знание современных программных продуктов</answer>
+			<answer id="2" isCorrect="0">знание иностранных языков и умение использовать их в своей деятельности</answer>
+			<answer id="3" isCorrect="1">умение целенаправленно работать с информацией и использовать ее для получения, обработки и передачи в компьютерную информационную технологию.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Информационные ресурсы общества — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">отдельные документы, отдельные массивы документов, документы и массивы документов в информационных системах (библиотеках, фондах, банках данных)</answer>
+			<answer id="2" isCorrect="0">первичные документы, которые используются предприятиями для осуществления своей деятельности</answer>
+			<answer id="3" isCorrect="0">отчетные документы, необходимые для принятия управленческих решений.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Рынок информационных услуг — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">услуги по разработке программных продуктов, подлежащих реализации</answer>
+			<answer id="2" isCorrect="0">система экономических, правовых и организационных отношений по торговле продуктами интеллектуального труда на коммерческой основе</answer>
+			<answer id="3" isCorrect="0">услуги по сопровождению программных продуктов.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		На рынке информационных услуг подлежат продаже и обмену:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">лицензии, ноу-хау, информационные технологии</answer>
+			<answer id="2" isCorrect="0">оборудование, помещения</answer>
+			<answer id="3" isCorrect="0">бланки первичных документов, вычислительная техника.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="2">
+		<text>
+		Информатика — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">гуманитарная наука</answer>
+			<answer id="2" isCorrect="1">прикладная наука</answer>
+			<answer id="3" isCorrect="0">общественная наука.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="3">
+		<text>
+		Кибернетика — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">отрасль народного хозяйства, которая объединяет совокупность предприятий разных форм собственности, где занимаются производством компьютерной техники, программных продуктов, разработкой современных технологий преобразования информации</answer>
+			<answer id="2" isCorrect="0">наука, направленная на аппаратное моделирование структур, подобных структуре человеческого мозга</answer>
+			<answer id="3" isCorrect="1">наука об общих принципах управления в различных системах — технических, биологических, социальных и др.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Экономическая информация — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">совокупность сведений, отражающих социально экономические процессы и служащих для управления этими процессами и коллективами людей в производственной и непроизводственной сфере</answer>
+			<answer id="2" isCorrect="0">отдельные факты, характеризующие объекты, процессы и явления в конкретной предметной области, а также их свойства</answer>
+			<answer id="3" isCorrect="0">выявленные закономерности в конкретной предметной области, позволяющие решать поставленные задачи.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="2">
+		<text>
+		Классификация экономической информации позволяет:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">ускорить процесс обработки информации</answer>
+			<answer id="2" isCorrect="1">распределить объекты (предметы, явления, процессы, понятия) по классам в соответствии с определенными признаками, сгруппировать их на качественно новом уровне</answer>
+			<answer id="3" isCorrect="0">улучшить качество разрабатываемых отчетных документов.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Методами классификации экономической информации являются:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">иерархический, фасетный, дескрипторный</answer>
+			<answer id="2" isCorrect="0">количественный и суммовой</answer>
+			<answer id="3" isCorrect="0">дебетовый и кредитовый.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Данные — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">отдельные факты, характеризующие объекты, процессы, явления. Это — признаки или записанные наблюдения, которые по каким-то причинам не используются, а только хранятся</answer>
+			<answer id="2" isCorrect="0">это выявленные закономерности в определенной предметной области</answer>
+			<answer id="3" isCorrect="0">совокупность сведений, необходимых для организации хозяйственной деятельности предприятия.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		По месту возникновения информация бывает:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">входная, выходная, внутренняя, внешняя</answer>
+			<answer id="2" isCorrect="0">текстовая, графическая</answer>
+			<answer id="3" isCorrect="0">учетная, статистическая.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="3">
+		<text>
+		По признаку стабильности информация бывает:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">количественная, суммовая</answer>
+			<answer id="2" isCorrect="0">обрабатываемая, необрабатываемая</answer>
+			<answer id="3" isCorrect="1">постоянная и переменная.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		По функциям управления информация бывает:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">плановая, учетная, оперативная</answer>
+			<answer id="2" isCorrect="0">промежуточная, результатная</answer>
+			<answer id="3" isCorrect="0">первичная, вторичная.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="2">
+		<text>
+		Учетная информация характеризует деятельность фирмы:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">за отчетный период</answer>
+			<answer id="2" isCorrect="1">за прошлый период</answer>
+			<answer id="3" isCorrect="0">на перспективу.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="3">
+		<text>
+		Информационная система — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">совокупность документов, необходимых для работы ' предприятия</answer>
+			<answer id="2" isCorrect="0">совокупность информационных массивов</answer>
+			<answer id="3" isCorrect="1">взаимосвязанная совокупность средств, методов и персонала, используемых для хранения, обработки и выдачи информации в интересах достижения поставленной цели.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="3">
+		<text>
+		По признаку автоматизации информационные системы делятся на:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">системы, реализуемые на базе «больших» ЭВМ и ПЭВМ</answer>
+			<answer id="2" isCorrect="0">системы глобальные и локальные</answer>
+			<answer id="3" isCorrect="1">системы ручные, автоматические, автоматизированные.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		По структурному признаку информационные системы делятся на подсистемы:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">информационного, программного, математического, технического, организационного, правового обеспечения</answer>
+			<answer id="2" isCorrect="0">внутренние и внешние</answer>
+			<answer id="3" isCorrect="0">сплошные и выборочные.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		На операционном уровне управления решаются задачи:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">хорошо структурированные, по которым имеются необходимые входные данные, известны алгоритмы расчета</answer>
+			<answer id="2" isCorrect="0">плановые</answer>
+			<answer id="3" isCorrect="0">задачи прогнозирования.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="2">
+		<text>
+		Подсистема информационного обеспечения — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">совокупность правовых норм, регламентирующих организацию системы информации на предприятии</answer>
+			<answer id="2" isCorrect="1">совокупность единой системы классификации и кодирования информации, унифицированных систем документации, схем информационных потоков, циркулирующих в организации, а также методология построения баз данных</answer>
+			<answer id="3" isCorrect="0">совокупность форм первичных и отчетных документов.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Подсистема информационного обеспечения складывается из подсистем:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">внутреннего и внешнего информационного обеспечения</answer>
+			<answer id="2" isCorrect="0">постоянного и переменного информационного обеспечения</answer>
+			<answer id="3" isCorrect="0">внемашинного и внутримашинного информационного обеспечения.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Содержание подсистемы внемашинного информационного обеспечения составляют:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">первичные документы, отчетные документы, классификаторы и коды</answer>
+			<answer id="2" isCorrect="0">файлы условно-постоянной информации</answer>
+			<answer id="3" isCorrect="0">базы данных.</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="3">
+		<text>
+		Подсистема программно-математического обеспечения включает:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">комплекс разрабатываемых программ</answer>
+			<answer id="2" isCorrect="0">таблицы алгоритмов</answer>
+			<answer id="3" isCorrect="1">совокупность математических методов, моделей, алгоритмов и программ для реализации целей и задач информационной системы, а также нормального функционирования комплекса технических средств.</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="2">
+		<text>
+		Электронная вычислительная машина (ЭВМ) — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">комплекс аппаратных и программных средств для обработки информации</answer>
+			<answer id="2" isCorrect="1">комплекс технических средств, предназначенный  для автоматической обработки информации</answer>
+			<answer id="3" isCorrect="0">модель, устанавливающая состав, порядок и принципы взаимодействия входящих в нее компонентов.</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="2">
+		<text>
+		По принципу действия вычислительные машины делятся на три больших класса:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">аналоговые (АВМ), цифровые (ЦВМ), электронные (ЭВМ)</answer>
+			<answer id="2" isCorrect="1">аналоговые (АВМ), цифровые (ЦВМ), гибридные (ГВМ)</answer>
+			<answer id="3" isCorrect="0">ламповые (ЛВМ), транзисторные (ТВМ), микро процессорные (МВМ).</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="3">
+		<text>
+		Цифровые вычислительные машины работают с информацией, представленной:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">в виде электрического напряжения</answer>
+			<answer id="2" isCorrect="0">в символьном виде</answer>
+			<answer id="3" isCorrect="1">в цифровой форме.</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="2,3,5">
+		<text>
+		По назначению ЭВМ можно разделить на три группы:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">бытовые</answer>
+			<answer id="2" isCorrect="1">универсальные</answer>
+			<answer id="3" isCorrect="1">проблемно-ориентированные</answer>
+			<answer id="4" isCorrect="0">машинно-зависимые</answer>
+			<answer id="5" isCorrect="1">специализированные</answer>
+			<answer id="6" isCorrect="0">с параллельно работающими микропроцессорами.</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1,4,6">
+		<text>
+		По размерам и функциональным возможностям ЭВМ можно разделить на:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">супер-ЭВМ</answer>
+			<answer id="2" isCorrect="0">свёрхсупер-ЭВМ</answer>
+			<answer id="3" isCorrect="0">минисупер-ЭВМ</answer>
+			<answer id="4" isCorrect="1">большие ЭВМ</answer>
+			<answer id="5" isCorrect="0">сверхмалые ЭВМ</answer>
+			<answer id="6" isCorrect="1">малые ЭВМ</answer>
+			<answer id="7" isCorrect="0">микро-ЭВМ.</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="2">
+		<text>
+		Персональный компьютер — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">ЭВМ для индивидуального покупателя</answer>
+			<answer id="2" isCorrect="1">настольная или персональная ЭВМ, удовлетворяющая требованиям общедоступности и универсальности</answer>
+			<answer id="3" isCorrect="0">ЭВМ, обеспечивающая диалог с пользователем.</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="3">
+		<text>
+		ПЭВМ четвертого поколения используют:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">8-битовые микропроцессоры</answer>
+			<answer id="2" isCorrect="0">32-битовые микропроцессоры</answer>
+			<answer id="3" isCorrect="1">64-битовые микропроцессоры.</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="2">
+		<text>
+		По конструктивным особенностям ПЭВМ делятся на:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">портативные и карманные</answer>
+			<answer id="2" isCorrect="1">стационарные (настольны</answer>
+			<answer id="3" isCorrect="0">и переносные</answer>
+			<answer id="4" isCorrect="0">блокноты и электронные записные книжки.</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1">
+		<text>
+		Мэйнфрейм — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">большая ЭВМ</answer>
+			<answer id="2" isCorrect="0">сверхбольшая ЭВМ</answer>
+			<answer id="3" isCorrect="0">супер-ЭВМ.</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="2">
+		<text>
+		Механическое устройство, позволяющее складывать числа, изобрел:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">П. Нортон</answer>
+			<answer id="2" isCorrect="1">Б. Паскаль</answer>
+			<answer id="3" isCorrect="0">Г. Лейбниц.</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1">
+		<text>
+		Идею механической машины с идеей программного управления соединил:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">Ч. Беббидж (середина XIX в. )</answer>
+			<answer id="2" isCorrect="0">Дж. Атанасов (30-е гг. XX в. )</answer>
+			<answer id="3" isCorrect="0">К. Берри (XX в. ).</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="2">
+		<text>
+		Первым программистом мира является:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">Г. Лейбниц</answer>
+			<answer id="2" isCorrect="1">А. Лавлейс</answer>
+			<answer id="3" isCorrect="0">Дж. фон Нейман.</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="2">
+		<text>
+		Первая ЭВМ, реализующая принципы программного управления, была создана:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">в США</answer>
+			<answer id="2" isCorrect="1">в Кембридже</answer>
+			<answer id="3" isCorrect="0">в Германии.</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1">
+		<text>
+		Основоположником отечественной вычислительной техники является:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">М. В. Ломоносов</answer>
+			<answer id="2" isCorrect="0">СВ. Королев</answer>
+			<answer id="3" isCorrect="0">С. А. Лебедев.</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1">
+		<text>
+		Первая отечественная ЭВМ была создана:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">в Киеве</answer>
+			<answer id="2" isCorrect="0">в Москве</answer>
+			<answer id="3" isCorrect="0">в Санкт-Петербурге.</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="2">
+		<text>
+		Что понимают под термином «поколение» ЭВМ :
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">Под поколением ЭВМ понимают все счетные машины.</answer>
+			<answer id="2" isCorrect="1">Под поколением ЭВМ понимают все типы и модели ЭВМ, построенные на одних и тех же научных и технических требованиях.</answer>
+			<answer id="3" isCorrect="0">Под поколением ЭВМ понимают совокупность машин предназначенных для обработки, хранения и передачи информации.</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="4">
+		<text>
+		В каком году появилась первая ЭВМ в России:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">1823 г.</answer>
+			<answer id="2" isCorrect="0">1946 г.</answer>
+			<answer id="3" isCorrect="0">1949 г.</answer>
+			<answer id="4" isCorrect="1">1951 г.</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="4">
+		<text>
+		Что представляет собой большая интегральная схема?
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">На одной плате расположены различные конденсаторы.</answer>
+			<answer id="2" isCorrect="0">Это набор программ для работы ЭВМ.</answer>
+			<answer id="3" isCorrect="0">Это набор ламп выполняющих различные функции.</answer>
+			<answer id="4" isCorrect="1">Это кристалл кремния, на котором размещаются десятки и сотни логических элементов.</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1">
+		<text>
+		В качестве языка программирования в машинах первого поколения использовался:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">машинный код</answer>
+			<answer id="2" isCorrect="0">Ассемблер</answer>
+			<answer id="3" isCorrect="0">Бейсик.</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1">
+		<text>
+		Средством связи пользователя с ЭВМ второго поколения являлись:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">перфокарты</answer>
+			<answer id="2" isCorrect="0">магнитные жетоны</answer>
+			<answer id="3" isCorrect="0">терминалы.</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1">
+		<text>
+		Первым инструментом для счета были:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">рука человека</answer>
+			<answer id="2" isCorrect="0">камешки</answer>
+			<answer id="3" isCorrect="0">палочки.</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="2">
+		<text>
+		Абак — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">устройство, похожее на музыкальный автомат</answer>
+			<answer id="2" isCorrect="1">устройство, похожее на счеты</answer>
+			<answer id="3" isCorrect="0">устройство для работы по заданной программе.</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1">
+		<text>
+		Укажите верное высказывание:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">Компьютер – это техническое средство для преобразования информации.</answer>
+			<answer id="2" isCorrect="0">Компьютер - предназначен для  хранения информации.</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="3">
+		<text>
+		Какой язык программирования был разработан раньше?
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">С++</answer>
+			<answer id="2" isCorrect="0">Qbasic</answer>
+			<answer id="3" isCorrect="1">Алгол.</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="1">
+		<text>
+		Информация в ЭВМ кодируется:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">в двоичной системе счисления</answer>
+			<answer id="2" isCorrect="0">в десятичной системе счисления</answer>
+			<answer id="3" isCorrect="0">в символах.</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="3">
+		<text>
+		Система счисления — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">представление чисел в экспоненциальной форме</answer>
+			<answer id="2" isCorrect="0">представление чисел с постоянным положением запятой</answer>
+			<answer id="3" isCorrect="1">способ представления чисел с помощью символов, имеющих определенные количественные значения.</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="2">
+		<text>
+		В зависимости от способа изображения чисел системы счисления делятся на:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">арабские и римские</answer>
+			<answer id="2" isCorrect="1">позиционные и непозиционные</answer>
+			<answer id="3" isCorrect="0">представленные в виде ряда и в виде разрядной сетки.</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="1">
+		<text>
+		Двоичная система счисления имеет основание Р.:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">Р = 2</answer>
+			<answer id="2" isCorrect="0">Р = 0</answer>
+			<answer id="3" isCorrect="0">Р = 1.</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="2">
+		<text>
+		Для представления чисел в восьмеричной системе счисления используют цифры:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">0 - 8</answer>
+			<answer id="2" isCorrect="1">0 - 7</answer>
+			<answer id="3" isCorrect="0">1 - 8.</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="1">
+		<text>
+		Для представления чисел в шестнадцатеричной системе счисления используют:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">цифры 0 - 9 и буквы A - F</answer>
+			<answer id="2" isCorrect="0">буквы A -Q</answer>
+			<answer id="3" isCorrect="0">числа 0 + 15.</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="2">
+		<text>
+		В дробных числах целая часть от дробной отделяется:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">запятой</answer>
+			<answer id="2" isCorrect="1">точкой</answer>
+			<answer id="3" isCorrect="0">апострофом.</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="2">
+		<text>
+		Число с плавающей точкой изображается в виде:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">основания системы и мантиссы</answer>
+			<answer id="2" isCorrect="1">мантиссы и порядка</answer>
+			<answer id="3" isCorrect="0">определяемого количества разрядов.</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="3">
+		<text>
+		Минимальная единица информации в двоичном коде — это
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">параграф</answer>
+			<answer id="2" isCorrect="0">байт</answer>
+			<answer id="3" isCorrect="1">бит.</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="1">
+		<text>
+		Один бит содержит:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">0 или 1</answer>
+			<answer id="2" isCorrect="0">одну цифру</answer>
+			<answer id="3" isCorrect="0">один символ.</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="2">
+		<text>
+		Один байт содержит:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">2 бита</answer>
+			<answer id="2" isCorrect="1">8 бит</answer>
+			<answer id="3" isCorrect="0">16 бит.</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="3">
+		<text>
+		Стандартным кодом для обмена информации является:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">код ACCESS</answer>
+			<answer id="2" isCorrect="0">код WORD</answer>
+			<answer id="3" isCorrect="1">код ASCII.</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="3">
+		<text>
+		Для перевода чисел из одной системы счисления в другую существуют:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">таблицы перевода</answer>
+			<answer id="2" isCorrect="0">правила перевода</answer>
+			<answer id="3" isCorrect="1">соответствующие стандарты.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="2">
+		<text>
+		Структура компьютера — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">комплекс электронных устройств, осуществляющих обработку информации</answer>
+			<answer id="2" isCorrect="1">некоторая модель, устанавливающая состав, по- рядок и принципы взаимодействия входящих в нее компонентов</answer>
+			<answer id="3" isCorrect="0">комплекс программных и аппаратных средств.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="3">
+		<text>
+		Основная функция ЭВМ:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">общение человека и машины</answer>
+			<answer id="2" isCorrect="0">разработка задач</answer>
+			<answer id="3" isCorrect="1">принцип программного управления.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1,2,3">
+		<text>
+		Персональный компьютер состоит из:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">системного блока</answer>
+			<answer id="2" isCorrect="1">монитора</answer>
+			<answer id="3" isCorrect="1">клавиатуры</answer>
+			<answer id="4" isCorrect="0">дополнительных устройств</answer>
+			<answer id="5" isCorrect="0">комплекса мультимедиа.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1,2,4,5">
+		<text>
+		Системный блок включает в себя:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">системную плату</answer>
+			<answer id="2" isCorrect="1">блок питания</answer>
+			<answer id="3" isCorrect="0">модулятор-демодулятор</answer>
+			<answer id="4" isCorrect="1">накопители на дисках</answer>
+			<answer id="5" isCorrect="1">платы расширений</answer>
+			<answer id="6" isCorrect="0">средства связи и коммуникаций.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1">
+		<text>
+		Микропроцессор предназначен для:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">управления работой компьютера и обработки данных</answer>
+			<answer id="2" isCorrect="0">ввода информации в ЭВМ и вывода ее на принтер</answer>
+			<answer id="3" isCorrect="0">обработки текстовых данных.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="2">
+		<text>
+		Разрядность микропроцессора — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">наибольшая единица информации</answer>
+			<answer id="2" isCorrect="1">количество битов, которое воспринимается микропроцессором как единое целое</answer>
+			<answer id="3" isCorrect="0">наименьшая единица информации.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="3">
+		<text>
+		От разрядности микропроцессора зависит:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">количество используемых внешних устройств</answer>
+			<answer id="2" isCorrect="0">возможность подключения к сети</answer>
+			<answer id="3" isCorrect="1">максимальный объем внутренней памяти и производительность компьютера.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1">
+		<text>
+		Тактовая частота микропроцессора измеряется в:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">мегагерцах</answer>
+			<answer id="2" isCorrect="0">кодах таблицы символов</answer>
+			<answer id="3" isCorrect="0">байтах и битах.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="2">
+		<text>
+		Функции процессора состоят в
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">подключении ЭВМ к электронной сети</answer>
+			<answer id="2" isCorrect="1">обработке данных, вводимых в ЭВМ</answer>
+			<answer id="3" isCorrect="0">выводе данных на печать.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="2">
+		<text>
+		Микропроцессоры различаются между собой:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">устройствами ввода и вывода</answer>
+			<answer id="2" isCorrect="1">разрядностью и тактовой частотой</answer>
+			<answer id="3" isCorrect="0">счетчиками времени.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1,3">
+		<text>
+		В состав микропроцессора входят:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">устройство управления (УУ)</answer>
+			<answer id="2" isCorrect="0">постоянное запоминающее устройство (ПЗУ)</answer>
+			<answer id="3" isCorrect="1">арифметико-логическое устройство</answer>
+			<answer id="4" isCorrect="0">кодовая шина данных</answer>
+			<answer id="5" isCorrect="0">кодовая шина инструкций.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="2">
+		<text>
+		Постоянная память предназначена для:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">длительного хранения информации</answer>
+			<answer id="2" isCorrect="1">хранения неизменяемой информации</answer>
+			<answer id="3" isCorrect="0">кратковременного хранения информации в текущий момент времени.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="3">
+		<text>
+		Оперативная память предназначена для:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">длительного хранения информации</answer>
+			<answer id="2" isCorrect="0">хранения неизменяемой информации</answer>
+			<answer id="3" isCorrect="1">кратковременного хранения информации в текущий момент времени.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1">
+		<text>
+		Внешняя память предназначена для:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">длительного хранения информации</answer>
+			<answer id="2" isCorrect="0">хранения неизменяемой информации</answer>
+			<answer id="3" isCorrect="0">кратковременного хранения информации в текущий момент времени.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1">
+		<text>
+		Основная память содержит:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">постоянное запоминающее устройство</answer>
+			<answer id="2" isCorrect="0">КЭШ-память</answer>
+			<answer id="3" isCorrect="0">кодовую шину инструкций (КШИ)</answer>
+			<answer id="4" isCorrect="0">порты ввода-вывода</answer>
+			<answer id="5" isCorrect="0">оперативное запоминающее устройство.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="2">
+		<text>
+		Оперативная память — это совокупность:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">системных плат</answer>
+			<answer id="2" isCorrect="1">специальных электронных ячеек</answer>
+			<answer id="3" isCorrect="0">специальных файлов.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1,3">
+		<text>
+		Устройствами внешней памяти являются:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">накопители на гибких магнитных дисках</answer>
+			<answer id="2" isCorrect="0">оперативные запоминающие устройства</answer>
+			<answer id="3" isCorrect="1">накопители на жестких магнитных дисках</answer>
+			<answer id="4" isCorrect="0">стриммеры</answer>
+			<answer id="5" isCorrect="0">плоттеры.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="2">
+		<text>
+		Внешняя память используется для:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">последовательного доступа к информации</answer>
+			<answer id="2" isCorrect="1">увеличения быстродействия микропроцессора</answer>
+			<answer id="3" isCorrect="0">долговременного хранения информации.
+Укажите правильный ответ.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="2,4,5">
+		<text>
+		Дискеты предназначены для:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">временного хранения информации</answer>
+			<answer id="2" isCorrect="1">обмена программами и данными между различными ПК</answer>
+			<answer id="3" isCorrect="0">вывода информации на экран</answer>
+			<answer id="4" isCorrect="1">хранения архивной информации</answer>
+			<answer id="5" isCorrect="1">хранения запасных копий программ.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="2">
+		<text>
+		Информация на магнитных дисках записывается:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">в специальных магнитных окнах</answer>
+			<answer id="2" isCorrect="1">по концентрическим дорожкам и секторам</answer>
+			<answer id="3" isCorrect="0">по индексным отверстиям.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1">
+		<text>
+		Информация на магнитных дисках представляется в форме:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">файлов</answer>
+			<answer id="2" isCorrect="0">символов</answer>
+			<answer id="3" isCorrect="0">битов.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1,2,4">
+		<text>
+		В зависимости от типа носителя накопители подразделяются на:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">сменные носители</answer>
+			<answer id="2" isCorrect="1">несменные носители</answer>
+			<answer id="3" isCorrect="0">КЭШ-носители</answer>
+			<answer id="4" isCorrect="1">кассетные носители.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="3">
+		<text>
+		Жесткие диски получили название:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">CD ROM</answer>
+			<answer id="2" isCorrect="0">диджитайзер</answer>
+			<answer id="3" isCorrect="1">винчестер.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1,2,3,7">
+		<text>
+		К устройствам ввода информации относятся:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">клавиатура</answer>
+			<answer id="2" isCorrect="1">диджитайзер</answer>
+			<answer id="3" isCorrect="1">мышь</answer>
+			<answer id="4" isCorrect="0">джойстик</answer>
+			<answer id="5" isCorrect="0">графопостроитель</answer>
+			<answer id="6" isCorrect="0">сетевой адаптер</answer>
+			<answer id="7" isCorrect="1">сенсорный экран.</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1,2,6,7">
+		<text>
+		К манипуляторам (устройствам указания) относятся:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">джойстик</answer>
+			<answer id="2" isCorrect="1">мышь</answer>
+			<answer id="3" isCorrect="0">клавиатура</answer>
+			<answer id="4" isCorrect="0">сканер</answer>
+			<answer id="5" isCorrect="0">трекбол</answer>
+			<answer id="6" isCorrect="1">планшет</answer>
+			<answer id="7" isCorrect="1">сетевое перо.</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1,2,4">
+		<text>
+		Основными функциями операционной системы являются:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">диалог с пользователем</answer>
+			<answer id="2" isCorrect="1">управление ресурсами компьютера</answer>
+			<answer id="3" isCorrect="0">разработка программ для ЭВМ</answer>
+			<answer id="4" isCorrect="1">запуск программ на выполнение</answer>
+			<answer id="5" isCorrect="0">вывод информации на принтер.</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="3">
+		<text>
+		К операционным системам относятся:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">MS-Office</answer>
+			<answer id="2" isCorrect="0">MS-Word, Word Pad, PowerPoint</answer>
+			<answer id="3" isCorrect="1">MS-DOS,  Windows XP.</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1,2">
+		<text>
+		Операционная система может храниться на:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">жестком магнитном диске</answer>
+			<answer id="2" isCorrect="1">гибком системном диске</answer>
+			<answer id="3" isCorrect="0">в специальном DOS-каталоге</answer>
+			<answer id="4" isCorrect="0">в каталоге пользователя.</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="3">
+		<text>
+		Сетевые операционные системы — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">комплекс программ для одновременной работы группы пользователей</answer>
+			<answer id="2" isCorrect="0">комплекс программ, переносимых в сети с одного компьютера на другой</answer>
+			<answer id="3" isCorrect="1">комплекс программ, обеспечивающих обработку, передачу и хранение данных в сети.</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="2">
+		<text>
+		Файл — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">часть диска</answer>
+			<answer id="2" isCorrect="1">поименованная область на диске</answer>
+			<answer id="3" isCorrect="0">последовательность операторов и команд.</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="2">
+		<text>
+		Для своего размещения файл требует:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">непрерывного пространства на диске</answer>
+			<answer id="2" isCorrect="1">свободных кластеров в различных частях диска</answer>
+			<answer id="3" isCorrect="0">Fat-таблицы.</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1">
+		<text>
+		Для обозначения файлов используют:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">имена и расширения</answer>
+			<answer id="2" isCorrect="0">команды операционной системы</answer>
+			<answer id="3" isCorrect="0">имена кластеров.</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1">
+		<text>
+		При образовании имени файла можно использовать:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">буквы латинского алфавита и цифры</answer>
+			<answer id="2" isCorrect="0">буквы русского алфавита</answer>
+			<answer id="3" isCorrect="0">цифры и специальные символы (&gt;, &lt;, =, пробел).</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1">
+		<text>
+		В качестве имени файла можно использовать символьное
+имя устройства:
+a)PRN, CON, NUL
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">DISP, PORT</answer>
+			<answer id="2" isCorrect="0">MODEM, ADAPTER.</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="4">
+		<text>
+		Тип (или расширени
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">файла обозначается:</answer>
+			<answer id="2" isCorrect="0">только тремя символами</answer>
+			<answer id="3" isCorrect="0">не более чем четырьмя символами</answer>
+			<answer id="4" isCorrect="1">не более чем тремя символами.</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1">
+		<text>
+		Командный файл — это файл, содержащий:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">последовательность команд операционной системы</answer>
+			<answer id="2" isCorrect="0">системную информацию</answer>
+			<answer id="3" isCorrect="0">последовательность операторов языка программирования.</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="2">
+		<text>
+		Текстовые файлы имеют расширение:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">.bak</answer>
+			<answer id="2" isCorrect="1">.txt</answer>
+			<answer id="3" isCorrect="0">.ехе.</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="3">
+		<text>
+		Расширение файла .ехе означает, что этот файл:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">командный</answer>
+			<answer id="2" isCorrect="0">системный</answer>
+			<answer id="3" isCorrect="1">выполняемый.</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="2">
+		<text>
+		Шаблон имени и расширения файла — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">специальная форма, в которой в полях имени и расширений типа файла используются символы «+» и «-.»</answer>
+			<answer id="2" isCorrect="1">специальная форма, в которой в полях имени и расширений типа файла используются символы «*» и «?»</answer>
+			<answer id="3" isCorrect="0">специальная форма, в которой в полях имени и расширений типа файла используются символы «-» и «?».</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1">
+		<text>
+		Символ «*» в обозначении файла означает:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">любое число любых символов</answer>
+			<answer id="2" isCorrect="0">один произвольный символ</answer>
+			<answer id="3" isCorrect="0">один конкретный символ.</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="3">
+		<text>
+		Имя файла в MS-DOS должно состоять:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">из не более чем 8 символов</answer>
+			<answer id="2" isCorrect="0">только из 8 символов</answer>
+			<answer id="3" isCorrect="1">из не более чем 8 символов.</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="2">
+		<text>
+		Символ «?» в имени файла означает:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">любое число любых символов</answer>
+			<answer id="2" isCorrect="1">один произвольный символ</answer>
+			<answer id="3" isCorrect="0">один конкретный символ.</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="2">
+		<text>
+		Путь или маршрут к файлу — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">последовательность операторов</answer>
+			<answer id="2" isCorrect="1">последовательность имен диска и каталогов, раз деленных символом «\»</answer>
+			<answer id="3" isCorrect="0">перечень и последовательность имен устройств, разделенных символом «:».</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1,3,4">
+		<text>
+		Исполняемые файлы имеют расширение:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">.ехе</answer>
+			<answer id="2" isCorrect="0">.bas</answer>
+			<answer id="3" isCorrect="1">.bat</answer>
+			<answer id="4" isCorrect="1">.com</answer>
+			<answer id="5" isCorrect="0">.xls.</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="2">
+		<text>
+		Каталог — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">постоянная память</answer>
+			<answer id="2" isCorrect="1">место хранения имен файлов</answer>
+			<answer id="3" isCorrect="0">внешняя память длительного хранения.</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="2">
+		<text>
+		Текущий каталог — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">корневой каталог</answer>
+			<answer id="2" isCorrect="1">каталог, с которым работают в настоящий момент времени</answer>
+			<answer id="3" isCorrect="0">каталог, который находится на одной из панелей программы-оболочки.</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="3">
+		<text>
+		Для обозначения каталогов используют:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">имена и расширения</answer>
+			<answer id="2" isCorrect="0">специальные имена</answer>
+			<answer id="3" isCorrect="1">обычные имена.</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1">
+		<text>
+		Каталоги образуют:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">иерархическую структуру</answer>
+			<answer id="2" isCorrect="0">сетевую структуру</answer>
+			<answer id="3" isCorrect="0">реляционную структуру.</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1">
+		<text>
+		Обозначение гибких дисков в MS-DOS:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">А:</answer>
+			<answer id="2" isCorrect="0">С:</answer>
+			<answer id="3" isCorrect="0">F:</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="3">
+		<text>
+		Правильное обозначение файла в MS-DOS:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">ab+bcd.e</answer>
+			<answer id="2" isCorrect="0">abc.txtd</answer>
+			<answer id="3" isCorrect="1">abc.txt.</answer>
+		</answers>
+	</question>
+	<question theme="5" answer="1">
+		<text>
+		Алгоритм — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">указание на выполнение действий</answer>
+			<answer id="2" isCorrect="0">система правил, описывающая последовательность действий, которые необходимо выполнить для решения задачи</answer>
+			<answer id="3" isCorrect="0">процесс выполнения вычислений, приводящих к решению задачи. -</answer>
+		</answers>
+	</question>
+	<question theme="5" answer="2,3,5,7">
+		<text>
+		Свойствами алгоритма являются:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">информативность</answer>
+			<answer id="2" isCorrect="1">дискретность</answer>
+			<answer id="3" isCorrect="1">массовость</answer>
+			<answer id="4" isCorrect="0">оперативность</answer>
+			<answer id="5" isCorrect="1">определенность</answer>
+			<answer id="6" isCorrect="0">цикличность</answer>
+			<answer id="7" isCorrect="1">результативность.</answer>
+		</answers>
+	</question>
+	<question theme="5" answer="1,3,4,5">
+		<text>
+		Алгоритм может быть задан следующими способами:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">словесным</answer>
+			<answer id="2" isCorrect="0">словесно-графическим</answer>
+			<answer id="3" isCorrect="1">графическим</answer>
+			<answer id="4" isCorrect="1">формально-словесным</answer>
+			<answer id="5" isCorrect="1">на алгоритмическом языке</answer>
+			<answer id="6" isCorrect="0">последовательностью байтов.</answer>
+		</answers>
+	</question>
+	<question theme="5" answer="4">
+		<text>
+		Программа — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">система правил, описывающая последовательность действий, которые необходимо выполнить для решения задачи</answer>
+			<answer id="2" isCorrect="0">указание на выполнение действий из заданного
+набора</answer>
+			<answer id="3" isCorrect="0">область внешней памяти для хранения текстовых,
+числовых данных и другой информации</answer>
+			<answer id="4" isCorrect="1">последовательность команд, реализующая алгоритм решения задачи.</answer>
+		</answers>
+	</question>
+	<question theme="5" answer="2">
+		<text>
+		Программа-интерпретатор выполняет:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">поиск файлов на диске</answer>
+			<answer id="2" isCorrect="1">пооператорное выполнение программы</answer>
+			<answer id="3" isCorrect="0">полное выполнение программы.</answer>
+		</answers>
+	</question>
+	<question theme="5" answer="3">
+		<text>
+		Программа-компилятор выполняет:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">переводит исходный текст в машинный код</answer>
+			<answer id="2" isCorrect="0">формирует текстовый файл</answer>
+			<answer id="3" isCorrect="1">записывает машинный код в форме загрузочного файла.</answer>
+		</answers>
+	</question>
+	<question theme="5" answer="3">
+		<text>
+		QBASIC — это
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">алгоритмический язык, использующий команды MS-DOS</answer>
+			<answer id="2" isCorrect="0">алгоритмический язык программирования, работающий в режиме интерпретации</answer>
+			<answer id="3" isCorrect="1">алгоритмический язык, работающий только в среде
+Windows.</answer>
+		</answers>
+	</question>
+	<question theme="5" answer="1,4,5,6,7,8">
+		<text>
+		Алфавит языка QBASIC включает:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">буквы латинского алфавита</answer>
+			<answer id="2" isCorrect="0">буквы русского алфавита</answer>
+			<answer id="3" isCorrect="0">буквы греческого алфавита</answer>
+			<answer id="4" isCorrect="1">цифры</answer>
+			<answer id="5" isCorrect="1">знаки арифметических операций: +, -, /, &quot;</answer>
+			<answer id="6" isCorrect="1">знаки операций отношений: &gt;, &lt;, =, &gt;=, &lt;=, &lt;&gt;</answer>
+			<answer id="7" isCorrect="1">специальные знаки:!,?, #, %,&amp;, $,«,«,,.,,</answer>
+			<answer id="8" isCorrect="1">круглые скобки () и) квадратные скобки.</answer>
+		</answers>
+	</question>
+	<question theme="5" answer="1,2">
+		<text>
+		В QBASIC существуют следующие типы данных:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">числовые</answer>
+			<answer id="2" isCorrect="1">текстовые</answer>
+			<answer id="3" isCorrect="0">указатели</answer>
+			<answer id="4" isCorrect="0">типы данных</answer>
+			<answer id="5" isCorrect="0">записи.</answer>
+		</answers>
+	</question>
+	<question theme="5" answer="1,2,4">
+		<text>
+		Числовые данные могут быть представлены как:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">целые</answer>
+			<answer id="2" isCorrect="1">с фиксированной точкой</answer>
+			<answer id="3" isCorrect="0">в виде строк</answer>
+			<answer id="4" isCorrect="1">с плавающей точкой.</answer>
+		</answers>
+	</question>
+	<question theme="5" answer="1,3">
+		<text>
+		Выберите правильно представленные числовые данные на
+QBASIC:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">+В, -14, 21.5Е2, 0.05</answer>
+			<answer id="2" isCorrect="0">3.4*Е8, 45.Е2, -16</answer>
+			<answer id="3" isCorrect="1">18.2, .05Е1, -18</answer>
+			<answer id="4" isCorrect="0">0.05Е5, ±16, -21,5</answer>
+			<answer id="5" isCorrect="0">21-Ю2, -18, 45.2</answer>
+		</answers>
+	</question>
+	<question theme="5" answer="1">
+		<text>
+		Запись числа в форме с плавающей точкой — это экспоненциальная форма записи:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">верно</answer>
+			<answer id="2" isCorrect="0">не верно.</answer>
+		</answers>
+	</question>
+	<question theme="5" answer="1">
+		<text>
+		Если тип данных несет текстовую информацию, то он должен быть заключен в кавычки:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">верно</answer>
+			<answer id="2" isCorrect="0">не верно.</answer>
+		</answers>
+	</question>
+	<question theme="5" answer="1,2,5,6,7">
+		<text>
+		Арифметические выражения состоят из:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">чисел</answer>
+			<answer id="2" isCorrect="1">констант</answer>
+			<answer id="3" isCorrect="0">команд MS-DOS</answer>
+			<answer id="4" isCorrect="0">машинных команд</answer>
+			<answer id="5" isCorrect="1">переменных</answer>
+			<answer id="6" isCorrect="1">функций</answer>
+			<answer id="7" isCorrect="1">круглых скобок</answer>
+			<answer id="8" isCorrect="0">квадратных скобок.</answer>
+		</answers>
+	</question>
+	<question theme="5" answer="2">
+		<text>
+		Переменная — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">служебное слово на языке QBASIC</answer>
+			<answer id="2" isCorrect="1">область памяти, в которой хранится некоторое значение</answer>
+			<answer id="3" isCorrect="0">значение регистра.</answer>
+		</answers>
+	</question>
+	<question theme="5" answer="2">
+		<text>
+		Имя переменной — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">любая последовательность любых символов</answer>
+			<answer id="2" isCorrect="1">последовательность латинских букв, цифр, специальных знаков (кроме пробел</answer>
+			<answer id="3" isCorrect="0">, которая всегда должна начинаться с латинской буквы</answer>
+			<answer id="4" isCorrect="0">последовательность русских, латинских букв, начинающихся с латинской буквы и из специальных знаков, допускающая знак подчеркивания.</answer>
+		</answers>
+	</question>
+	<question theme="5" answer="2">
+		<text>
+		Для обозначения строковых переменных:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">рядом с именем слева ставится знак $</answer>
+			<answer id="2" isCorrect="1">рядом с именем справа ставится знак $</answer>
+			<answer id="3" isCorrect="0">имя переменной записывается в кавычках.</answer>
+		</answers>
+	</question>
+	<question theme="5" answer="3">
+		<text>
+		Для обозначения целочисленных переменных:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">рядом с именем слева ставится знак %</answer>
+			<answer id="2" isCorrect="0">рядом с именем слева ставится знак #</answer>
+			<answer id="3" isCorrect="1">рядом с именем справа ставится знак %.</answer>
+		</answers>
+	</question>
+	<question theme="5" answer="2">
+		<text>
+		Для обозначения действительных переменных с двойной точностью:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">рядом с именем слева ставится знак #</answer>
+			<answer id="2" isCorrect="1">рядом с именем справа ставится знак #</answer>
+			<answer id="3" isCorrect="0">рядом с именем справа ставятся знаки ##.</answer>
+		</answers>
+	</question>
+	<question theme="5" answer="3">
+		<text>
+		Верно ли утверждение?
+В написании имен допускаются как строчные (маленьки
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">, так и заглавные (больши</answer>
+			<answer id="2" isCorrect="0">буквы и QBASIC не делает между ними различия:</answer>
+			<answer id="3" isCorrect="1">верно</answer>
+			<answer id="4" isCorrect="0">не верно.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="1">
+		<text>
+		Текстовый редактор — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">прикладное программное обеспечение, используемое для создания текстовых документов и работы с ними</answer>
+			<answer id="2" isCorrect="0">прикладное программное обеспечение, используемое для создания таблиц и работы с ними</answer>
+			<answer id="3" isCorrect="0">прикладное программное обеспечение, используемое для автоматизации задач бухгалтерского учета.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="1">
+		<text>
+		К текстовым редакторам относятся редакторы:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">Word for Windows</answer>
+			<answer id="2" isCorrect="0">Quattro Pro, Super Calc</answer>
+			<answer id="3" isCorrect="0">Paradox, Clipper.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="2">
+		<text>
+		Основными функциями текстовых редакторов являются:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">создание таблиц и выполнение расчетов по ним</answer>
+			<answer id="2" isCorrect="1">редактирование текста, форматирование текста, вывод текста на печать</answer>
+			<answer id="3" isCorrect="0">разработка графических приложений.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="2">
+		<text>
+		Основными функциями форматирования текста являются:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">ввод текста, корректировка текста</answer>
+			<answer id="2" isCorrect="1">установление значений полей страницы, форматирование абзацев, установка шрифтов, структурирование и многоколонный набор</answer>
+			<answer id="3" isCorrect="0">перенос, копирование, переименование, удаление.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="3">
+		<text>
+		Основными функциями редактирования текста являются:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">выделение фрагментов текста</answer>
+			<answer id="2" isCorrect="0">установка межстрочных интервалов</answer>
+			<answer id="3" isCorrect="1">ввод текста, коррекция, вставка, удаление, копирование, перемещение.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="1">
+		<text>
+		Для загрузки программы MS-Word необходимо:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">в меню Пуск выбрать пункт Программы, в выпадающих подменю щелкнуть по позиции Microsoft Office, а затем — Microsoft Word</answer>
+			<answer id="2" isCorrect="0">в меню Пуск выбрать пункт Документы, в выпадающем подменю щелкнуть по строке Microsoft Word</answer>
+			<answer id="3" isCorrect="0">набрать на клавиатуре Microsoft Word и нажать клавишу Enter.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="2">
+		<text>
+		Для создания нового файла в редакторе MS-Word необходимо:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">выполнить команду «Открыть» из меню «Файл»</answer>
+			<answer id="2" isCorrect="1">выполнить команду «Создать» из меню «Файл». В закладке «Общие» щелкнуть по пиктограмме «Обычный» и нажать ОК</answer>
+			<answer id="3" isCorrect="0">щелкнуть пиктограмму «Создать» на панели инструментов.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="1,4">
+		<text>
+		Укажите все правильные Ответы. Для сохранения документа в редакторе MS-Word необходимо:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">выбрать команду «Сохранить» из меню «Файл»</answer>
+			<answer id="2" isCorrect="0">выбрать команду «Создать» из меню «Файл»</answer>
+			<answer id="3" isCorrect="0">щелкнуть пиктограмму «Создать» на панели инструментов</answer>
+			<answer id="4" isCorrect="1">щелкнуть пиктограмму «Сохранить» на панели инструментов.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="2">
+		<text>
+		Электронная таблица — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">устройство ввода графической информации в ПЭВМ</answer>
+			<answer id="2" isCorrect="1">компьютерный эквивалент обычной таблицы, в клетках которой записаны данные различных типов</answer>
+			<answer id="3" isCorrect="0">устройство ввода числовой информации в ПЭВМ.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="2">
+		<text>
+		Ячейка электронной таблицы определяется:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">именами столбцов</answer>
+			<answer id="2" isCorrect="1">областью пересечения строк и столбцов</answer>
+			<answer id="3" isCorrect="0">номерами строк.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="1">
+		<text>
+		Ссылка в электронной таблице определяет:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">способ указания адреса ячейки</answer>
+			<answer id="2" isCorrect="0">ячейку на пересечении строки и столбца</answer>
+			<answer id="3" isCorrect="0">блок ячеек.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="3">
+		<text>
+		Адрес ячейки в электронной таблице определяется:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">номером листа и номером строки</answer>
+			<answer id="2" isCorrect="0">номером листа и именем столбца</answer>
+			<answer id="3" isCorrect="1">названием столбца и номером строки.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="3">
+		<text>
+		Блок ячеек электронной таблицы задается:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">номерами строк первой и последней ячейки</answer>
+			<answer id="2" isCorrect="0">именами столбцов первой и последней ячейки</answer>
+			<answer id="3" isCorrect="1">указанием ссылок на первую и последнюю ячейку.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="3">
+		<text>
+		К встроенным функциям табличных процессоров относятся:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">математические</answer>
+			<answer id="2" isCorrect="0">статистические</answer>
+			<answer id="3" isCorrect="1">расчетные</answer>
+			<answer id="4" isCorrect="0">финансовые.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="3">
+		<text>
+		К табличным процессорам относятся:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">FoxPro</answer>
+			<answer id="2" isCorrect="0">Quattro Pro</answer>
+			<answer id="3" isCorrect="1">Excel</answer>
+			<answer id="4" isCorrect="0">Super Calc</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="1">
+		<text>
+		Табличный процессор — это программный продукт, предназначенный для:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">обеспечения работы с таблицами данных</answer>
+			<answer id="2" isCorrect="0">управления большими информационными массивами</answer>
+			<answer id="3" isCorrect="0">создания и редактирования текстов.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="3">
+		<text>
+		Адрес в электронной таблице указывает координату:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">клетки в блоке клеток</answer>
+			<answer id="2" isCorrect="0">данных в строке</answer>
+			<answer id="3" isCorrect="1">клетки в электронной таблице.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="3">
+		<text>
+		Статистические функции табличных процессоров используются для:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">построения логических выражений</answer>
+			<answer id="2" isCorrect="0">определения размера ежемесячных выплат для погашения кредита, расчета норм амортизационных отделений</answer>
+			<answer id="3" isCorrect="1">вычисления среднего значения, стандартного отклонения.</answer>
+			<answer id="4" isCorrect="0">изображения значений переменной в виде вертикальных столбцов.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="1">
+		<text>
+		Линейный график используется для:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">изображения каждой переменной в виде ломаной линии</answer>
+			<answer id="2" isCorrect="0">изображения значений каждой из переменных в виде слоев</answer>
+			<answer id="3" isCorrect="0">графической интерпретации одной переменной.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="1,2,3">
+		<text>
+		Над данными в электронной таблице выполняются действия:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">ввод данных в таблицу</answer>
+			<answer id="2" isCorrect="1">преобразование данных в блоках таблицы</answer>
+			<answer id="3" isCorrect="1">манипулирование данными в блоках таблицы</answer>
+			<answer id="4" isCorrect="0">формирование столбцов и блоков клеток</answer>
+			<answer id="5" isCorrect="0">распечатка документа на принтере</answer>
+			<answer id="6" isCorrect="0">создание электронного макета таблицы.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="1,3,4">
+		<text>
+		К системам управления базами данных относятся:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">Access</answer>
+			<answer id="2" isCorrect="0">Amipro</answer>
+			<answer id="3" isCorrect="1">Foxpro</answer>
+			<answer id="4" isCorrect="1">Oracle.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="1,2,4">
+		<text>
+		Модель базы данных может быть:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">иерархическая</answer>
+			<answer id="2" isCorrect="1">сетевая</answer>
+			<answer id="3" isCorrect="0">системная</answer>
+			<answer id="4" isCorrect="1">реляционная.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="1,3">
+		<text>
+		Объектом действий в базе данных является:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">поле</answer>
+			<answer id="2" isCorrect="0">формула</answer>
+			<answer id="3" isCorrect="1">запись.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="2">
+		<text>
+		Система управления базами данных — это программное средство для:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">обеспечения работы с таблицами чисел</answer>
+			<answer id="2" isCorrect="1">управления большими информационными массивами</answer>
+			<answer id="3" isCorrect="0">хранения файлов</answer>
+			<answer id="4" isCorrect="0">создания и редактирования текстов.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="3">
+		<text>
+		База данных — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">набор взаимосвязанных модулей, обеспечивающих автоматизацию многих видов деятельности</answer>
+			<answer id="2" isCorrect="0">таблица, позволяющая хранить и обрабатывать данные и формулы</answer>
+			<answer id="3" isCorrect="1">интегрированная совокупность данных, предназначенная для хранения и многофункционального использования</answer>
+			<answer id="4" isCorrect="0">прикладная программа для обработки информации пользователя.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="1,3">
+		<text>
+		Система управления базой данных обеспечивает:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">создание и редактирование базы данных</answer>
+			<answer id="2" isCorrect="0">создание и редактирование текстов</answer>
+			<answer id="3" isCorrect="1">манипулирование данными (редактирование, выборку).</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="1,3,5">
+		<text>
+		Над записями в базе данных выполняются операции:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">редактирование</answer>
+			<answer id="2" isCorrect="0">проектирование</answer>
+			<answer id="3" isCorrect="1">сортировка</answer>
+			<answer id="4" isCorrect="0">эксплуатация</answer>
+			<answer id="5" isCorrect="1">индексирование</answer>
+			<answer id="6" isCorrect="0">поиск по ключу.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="6">
+		<text>
+		Производительность СУБД оценивается факторами:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">временем выполнения запроса</answer>
+			<answer id="2" isCorrect="0">временем генерации отчета</answer>
+			<answer id="3" isCorrect="0">скоростью поиска информации</answer>
+			<answer id="4" isCorrect="0">временем импортирования базы данных из других файлов</answer>
+			<answer id="5" isCorrect="0">временем выполнения операций обновления, удаления, вставки данных</answer>
+			<answer id="6" isCorrect="1">все Ответы верны</answer>
+			<answer id="7" isCorrect="0">все Ответы не верны.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="1,2,4,6">
+		<text>
+		Средства обеспечения безопасности данных предназначены для:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">шифрования прикладных программ</answer>
+			<answer id="2" isCorrect="1">шифрования данных</answer>
+			<answer id="3" isCorrect="0">шифрования форм отчетов</answer>
+			<answer id="4" isCorrect="1">защиты паролем</answer>
+			<answer id="5" isCorrect="0">ограничения доступа к различным пунктам меню</answer>
+			<answer id="6" isCorrect="1">ограничения уровня доступа к базе данных, к таблице.</answer>
+		</answers>
+	</question>
+	<question theme="6" answer="2,3,5">
+		<text>
+		В пакете Microsoft Office присутствуют приложения:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">Microsoft Publisher</answer>
+			<answer id="2" isCorrect="1">Microsoft Word</answer>
+			<answer id="3" isCorrect="1">Excel</answer>
+			<answer id="4" isCorrect="0">Time Line</answer>
+			<answer id="5" isCorrect="1">Access</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="2">
+		<text>
+		Компьютерная сеть — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">группа установленных рядом вычислительных машин, объединенных с помощью средств сопряжения и выполняющих единый информационно-вычислительный процесс</answer>
+			<answer id="2" isCorrect="1">совокупность компьютеров и терминалов, соединенных с помощью каналов связи в единую систему, удовлетворяющую требованиям распределенной обработки данных</answer>
+			<answer id="3" isCorrect="0">совокупность сервера и рабочих станций, соединенных с помощью коаксиального или оптоволоконного кабеля</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="2">
+		<text>
+		Абонент сети — это
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">аппаратура, выполняющая обработку данных на независимых компьютерах</answer>
+			<answer id="2" isCorrect="1">объекты, генерирующие или потребляющие информацию</answer>
+			<answer id="3" isCorrect="0">аппаратура для получения информации от сервера</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="3">
+		<text>
+		Станция — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">средство сопряжения с компьютером</answer>
+			<answer id="2" isCorrect="0">аппаратура для подключения к глобальной сети</answer>
+			<answer id="3" isCorrect="1">аппаратура, передающая и принимающая информацию</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="1">
+		<text>
+		Физическая передающая среда — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">линии связи, пространство для распространения сигналов, аппаратура передачи данных</answer>
+			<answer id="2" isCorrect="0">мультиплексор передачи данных</answer>
+			<answer id="3" isCorrect="0">витая пара проводов, коаксиальный кабель, оптоволоконный кабель.</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="2">
+		<text>
+		Существуют три режима передачи данных:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">симплексный, прямой, обратный</answer>
+			<answer id="2" isCorrect="1">симплексный, полудуплексный, дуплексный</answer>
+			<answer id="3" isCorrect="0">последовательный, параллельный, многопроцессорный</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="2">
+		<text>
+		Наиболее распространенным кодом передачи данных по каналам связи является:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">код КОИ-12</answer>
+			<answer id="2" isCorrect="1">код ASCII</answer>
+			<answer id="3" isCorrect="0">код ПД-6</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="1">
+		<text>
+		Для сопряжения ЭВМ с одним каналом связи используется:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">адаптер</answer>
+			<answer id="2" isCorrect="0">концентратор</answer>
+			<answer id="3" isCorrect="0">повторитель</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="2">
+		<text>
+		Для сопряжения ЭВМ с несколькими каналами связи используется:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">сетевой адаптер</answer>
+			<answer id="2" isCorrect="1">мультиплексор передачи данных</answer>
+			<answer id="3" isCorrect="0">модем</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="2,5">
+		<text>
+		Устройством, выполняющим модуляцию и демодуляцию информации (преобразование информации), является:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">сетевой адаптер</answer>
+			<answer id="2" isCorrect="1">модем</answer>
+			<answer id="3" isCorrect="0">повторитель
+ 10. Скорость передачи данных по каналу связи измеряется:</answer>
+			<answer id="4" isCorrect="0">количеством передаваемых байтов в минуту</answer>
+			<answer id="5" isCorrect="1">количеством передаваемых битов информации в секунду</answer>
+			<answer id="6" isCorrect="0">количеством передаваемых символов в секунду</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="2">
+		<text>
+		Протокол компьютерной сети — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">программа для связи абонентов</answer>
+			<answer id="2" isCorrect="1">набор правил, обусловливающий порядок обмена информацией в сети</answer>
+			<answer id="3" isCorrect="0">программа, позволяющая преобразовывать информацию в коды ASCII</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="1">
+		<text>
+		Информационно-вычислительные системы по их размерам подразделяются на:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">локальные, региональные, глобальные, широко
+масштабные</answer>
+			<answer id="2" isCorrect="0">терминальные, административные, смешанные</answer>
+			<answer id="3" isCorrect="0">цифровые, коммерческие, корпоративные</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="1">
+		<text>
+		Локальная вычислительная сеть (LAN) — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">вычислительная сеть, функционирующая в пределах подразделения или подразделений предприятия</answer>
+			<answer id="2" isCorrect="0">объединение вычислительных сетей на государственном уровне</answer>
+			<answer id="3" isCorrect="0">общепланетное объединение сетей</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="1">
+		<text>
+		Признак «Типология сети» характеризует:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">схему приводных соединений в сети (сервера и рабочих станций)</answer>
+			<answer id="2" isCorrect="0">как работает сеть</answer>
+			<answer id="3" isCorrect="0">состав технических средств</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="2">
+		<text>
+		ЛВС по признаку «топология» подразделяются на:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">реальные, искусственные</answer>
+			<answer id="2" isCorrect="1">типа «Звезда», «Шина», «Кольцо»</answer>
+			<answer id="3" isCorrect="0">проводные, беспроводные</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="2">
+		<text>
+		Признак «Технология сети» характеризует:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">состав используемых программных средств</answer>
+			<answer id="2" isCorrect="1">как работает сеть</answer>
+			<answer id="3" isCorrect="0">необходимость дополнительной ОС для сервера</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="1,4">
+		<text>
+		Топологии типа «Звезда» обладает достоинствами:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">малое время реакции сервера на запрос рабочей станции</answer>
+			<answer id="2" isCorrect="0">возможность одновременной передачи информации сразу всем рабочим станциям</answer>
+			<answer id="3" isCorrect="0">возможность работы в сети при отключенном сервере
+ 18. Программное обеспечение ЛВС включает:</answer>
+			<answer id="4" isCorrect="1">сетевую ОС, пакеты прикладных программ, базы данных</answer>
+			<answer id="5" isCorrect="0">пакеты прикладных программ, базы данных</answer>
+			<answer id="6" isCorrect="0">MS-Dos, MS-Windows, NetWare</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="1">
+		<text>
+		Наиболее распространенной операционной системой для ЛВС является:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">NetWare</answer>
+			<answer id="2" isCorrect="0">MS-DOS</answer>
+			<answer id="3" isCorrect="0">Windows</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="3">
+		<text>
+		Операционная система NetWare поддерживает сеть топологии:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">«Звезда»</answer>
+			<answer id="2" isCorrect="0">«Кольцо»</answer>
+			<answer id="3" isCorrect="1">любой топологии</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="2">
+		<text>
+		Операционная система NetWare поддерживает сеть с управлением:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">децентрализованным</answer>
+			<answer id="2" isCorrect="1">смешанным</answer>
+			<answer id="3" isCorrect="0">централизованным</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="2">
+		<text>
+		Аппаратное обеспечение ЛВС включает:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">рабочие станции, коммуникационное оборудование, ПЭВМ</answer>
+			<answer id="2" isCorrect="1">рабочие станции, сервер, коммуникационное оборудование</answer>
+			<answer id="3" isCorrect="0">коммуникационное оборудование, сервер</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="3">
+		<text>
+		Internet —это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">локальная вычислительная сеть</answer>
+			<answer id="2" isCorrect="0">региональная информационно-вычислительная сеть</answer>
+			<answer id="3" isCorrect="1">гигантская мировая компьютерная сеть</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="1">
+		<text>
+		www — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">графическое инструментальное средство поиска
+информации по гипертекстовым ссылкам. Информация на WWW-серверах хранится в виде набора документов</answer>
+			<answer id="2" isCorrect="0">программа, осуществляющая автоматический поиск файлов информации с заданным именем</answer>
+			<answer id="3" isCorrect="0">программа, позволяющая просматривать информацию, содержащуюся на конкретном сервере в Internet</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="3">
+		<text>
+		Наиболее эффективными средствами контроля данных в сети
+являются:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">организация надежной и эффективной системы архивации</answer>
+			<answer id="2" isCorrect="0">использование зеркальных дисков</answer>
+			<answer id="3" isCorrect="1">система паролей, использование различного вида
+идентификационных пластиковых карточек</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="1">
+		<text>
+		Наиболее эффективными средствами защиты от компьютерных вирусов являются:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">антивирусные программы</answer>
+			<answer id="2" isCorrect="0">аппаратные средства</answer>
+			<answer id="3" isCorrect="0">организационные мероприятия</answer>
+		</answers>
+	</question>
+	<question theme="7" answer="2">
+		<text>
+		Провайдер — это:
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">устройство для подключения к Internet</answer>
+			<answer id="2" isCorrect="1">поставщик услуг Internet</answer>
+			<answer id="3" isCorrect="0">договор на подключение к Internet</answer>
+		</answers>
+	</question>
+</questions>
+</trees>

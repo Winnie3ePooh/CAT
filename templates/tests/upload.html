@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load crispy_forms_tags %}
+<!-- {% crispy example_form example_form.helper %} -->
 
 {% block content %}
-<form id="user_form" method="post" action="." enctype="multipart/form-data">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <input onclick="$('#myPleaseWait').modal('show');" type="submit" name="submit" value="TEST" />
-</form>
+<div class="container">
+    {% csrf_token %}
+    {% crispy uploadForm %}
+</div>
 <!-- Modal Start here-->
 <div class="modal fade bs-example-modal-sm" id="myPleaseWait" tabindex="-1"
     role="dialog" aria-hidden="true" data-backdrop="static">

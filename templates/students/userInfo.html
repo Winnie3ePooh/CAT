@@ -1,11 +1,44 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 <div class="container">
-    {{ context.username }}</br>
+    <!-- {{ context.username }}</br>
     {{ context.email }} </br>
     {{ context.first_name }} </br>
-    {{ context.last_name }}
+    {{ context.last_name }} -->
+    <div class="col-md-6">
+      <form id="form" method="post" action="." enctype="multipart/form-data">
+        {% csrf_token %}
+        {% csrf_token %}
+        {{ form|crispy }}
+      </form>
+      <input onclick="$('#myPleaseWait').modal('show');" type="submit" class="btn btn-default" name="submit" value="TEST" />
+    </div>
+  </form>
+  <!-- Modal Start here-->
+  <div class="modal fade bs-example-modal-sm" id="myPleaseWait" tabindex="-1"
+      role="dialog" aria-hidden="true" data-backdrop="static">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h4 class="modal-title">
+                      <span class="glyphicon glyphicon-time">
+                      </span>  Пожалуйста, подождите
+                   </h4>
+              </div>
+              <div class="modal-body">
+                  <div class="progress">
+                      <div class="progress-bar progress-bar-info
+                      progress-bar-striped active"
+                      style="width: 100%">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Modal ends Here -->
 </div>
 {% endblock %}

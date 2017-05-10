@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+
+<name>Теория обучения</name>
+<give>теории обучения</give>
+<category>Педагогика</category>
+<description></description>
+
+<themes>
+	<theme id="0">сущность, движущие силы, логика процесса обучения</theme>
+	<theme id="1">содержание образования как фундамент базовой культуры личности</theme>
+	<theme id="2">современные модели организации обучения</theme>
+	<theme id="3">типология образовательных учреждений</theme>
+	<theme id="4">инновационные процессы в образовании</theme>
+</themes>
+
+<questions>
+	<question theme="0" answer="1">
+		<text>
+		Наука об обучении, образовании, их целях, содержании, методах, средствах называется…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">дидактикой</answer>
+			<answer id="2" isCorrect="0">теорией воспитания</answer>
+			<answer id="3" isCorrect="0">педагогическим менеджментом</answer>
+			<answer id="4" isCorrect="0">педагогической технологией</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Термин “дидактика” впервые ввел…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">В. Ратке</answer>
+			<answer id="2" isCorrect="0">Я.А. Коменский</answer>
+			<answer id="3" isCorrect="0">Ж.Ж. Руссо</answer>
+			<answer id="4" isCorrect="0">И.Г. Песталоцци</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Под дидактикой понимал “всеобщее искусство всех учить всему”…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">Я.А. Коменский</answer>
+			<answer id="2" isCorrect="0">П.Ф. Каптерев</answer>
+			<answer id="3" isCorrect="0">К.Д. Ушинский</answer>
+			<answer id="4" isCorrect="0">А. Дистервег</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Процессы преподавания и учения с их условиями и получаемыми результатами – это предмет …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">дидактики</answer>
+			<answer id="2" isCorrect="0">технологии</answer>
+			<answer id="3" isCorrect="0">теории воспитания</answer>
+			<answer id="4" isCorrect="0">теории управления</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Функциями процесса обучения являются …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">образовательная, воспитательная, развивающая</answer>
+			<answer id="2" isCorrect="0">воспитательная, прогностическая, проектировочная</answer>
+			<answer id="3" isCorrect="0">образовательная, воспитательная, объяснительная</answer>
+			<answer id="4" isCorrect="0">развивающая, образовательная, прогностическая</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Совокупность принципов, содержание, методы и средства обучения, образующие целостную структуру и подчиняющиеся целям обучения, составляют…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">дидактическую систему</answer>
+			<answer id="2" isCorrect="0">педагогическую теорию</answer>
+			<answer id="3" isCorrect="0">педагогическую систему</answer>
+			<answer id="4" isCorrect="0">дидактическую теорию</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Учение понимается в дидактике как…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">деятельность учеников</answer>
+			<answer id="2" isCorrect="0">взаимодействие учащихся и учителя</answer>
+			<answer id="3" isCorrect="0">восприятие новых знаний</answer>
+			<answer id="4" isCorrect="0">формирование умений</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Управление учебно-познавательной деятельностью учащихся называется…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">преподаванием</answer>
+			<answer id="2" isCorrect="0">учением</answer>
+			<answer id="3" isCorrect="0">развитием интереса учащихся</answer>
+			<answer id="4" isCorrect="0">формированием личности</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Связи между целями, содержанием, методами, средствами, формами обучения относятся к ___ закономерностям
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">внутренним</answer>
+			<answer id="2" isCorrect="0">общим</answer>
+			<answer id="3" isCorrect="0">внешним</answer>
+			<answer id="4" isCorrect="0">частным</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Эффективность обучения зависит от целесообразного привлечения органов чувств к восприятию и усвоению учебного материала – это принцип…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">наглядности</answer>
+			<answer id="2" isCorrect="0">доступности</answer>
+			<answer id="3" isCorrect="0">сознательности и активности</answer>
+			<answer id="4" isCorrect="0">прочности знаний</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Принцип ведущей роли теоретических знаний используется в концепции ___ обучения
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">развивающего</answer>
+			<answer id="2" isCorrect="0">проблемного</answer>
+			<answer id="3" isCorrect="0">оптимизации</answer>
+			<answer id="4" isCorrect="0">программированного</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Процессом обучения называется …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">специфический процесс познания, управляемый педагогом</answer>
+			<answer id="2" isCorrect="0">преподавание</answer>
+			<answer id="3" isCorrect="0">учебная деятельность</answer>
+			<answer id="4" isCorrect="0">образовательная деятельность</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		К дидактическим принципам не относится принцип …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">гуманности обучения</answer>
+			<answer id="2" isCorrect="0">наглядности</answer>
+			<answer id="3" isCorrect="0">систематичности и последовательности</answer>
+			<answer id="4" isCorrect="0">взаимосвязь теории и практики обучения</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		В структуру учебной деятельности не входит …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">формирование нравственных качеств и убеждений</answer>
+			<answer id="2" isCorrect="0">овладение системой знаний, познавательных умений и практических навыков</answer>
+			<answer id="3" isCorrect="0">развитие мотивов учения</answer>
+			<answer id="4" isCorrect="0">овладение способами управления своей учебной деятельностью и своими психическими процессами</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Двусторонний характер обучения проявляется в единстве …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">преподавания и учения</answer>
+			<answer id="2" isCorrect="0">развития и воспитания учащихся</answer>
+			<answer id="3" isCorrect="0">школьной и внешкольной деятельности</answer>
+			<answer id="4" isCorrect="0">совместных усилий семьи и школы по формированию у учащихся мотивов учения</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		Принцип наглядности в дидактике означает …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">привлечение органов чувств к восприятию учебного материала</answer>
+			<answer id="2" isCorrect="0">использование плакатов, схем, картин в процессе обучения</answer>
+			<answer id="3" isCorrect="0">проведение опытов в процессе обучения</answer>
+			<answer id="4" isCorrect="0">просмотр кино- и видеофильмов</answer>
+		</answers>
+	</question>
+	<question theme="0" answer="1">
+		<text>
+		В структуру процесса обучения не входит…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">определение уровня мышления учащихся</answer>
+			<answer id="2" isCorrect="0">определение целей и задач</answer>
+			<answer id="3" isCorrect="0">планирование (отбор содержания, методов, приёмов, средств и форм)</answer>
+			<answer id="4" isCorrect="0">анализ и оценка результатов обучения</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1">
+		<text>
+		Эталонный уровень образования, необходимый для данного общества в определенный исторический отрезок времени, - это…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">образовательный стандарт</answer>
+			<answer id="2" isCorrect="0">образовательный ценз</answer>
+			<answer id="3" isCorrect="0">учебный план</answer>
+			<answer id="4" isCorrect="0">школьная программа</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1">
+		<text>
+		Документ, определяющий содержание образования определенного уровня и направленности, - это…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">образовательная программа</answer>
+			<answer id="2" isCorrect="0">учебник</answer>
+			<answer id="3" isCorrect="0">рабочий учебный план</answer>
+			<answer id="4" isCorrect="0">авторская программа</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1">
+		<text>
+		Нормативный документ, определяющий состав учебных предметов, их распределение по годам обучения, количество времени на каждый предмет, - это…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">учебный план</answer>
+			<answer id="2" isCorrect="0">учебник</answer>
+			<answer id="3" isCorrect="0">образовательная область</answer>
+			<answer id="4" isCorrect="0">учебная программа</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1">
+		<text>
+		Среди понятий «образование», «содержание образования», «учебный план», «образовательная область» наиболее масштабным является понятие …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">«образование»</answer>
+			<answer id="2" isCorrect="0">«содержание образования»</answer>
+			<answer id="3" isCorrect="0">«учебный план»</answer>
+			<answer id="4" isCorrect="0">«образовательная область»</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1">
+		<text>
+		Основоположником теории формального образования является…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">Я.А. Коменский</answer>
+			<answer id="2" isCorrect="0">Г. Спенсер</answer>
+			<answer id="3" isCorrect="0">И.Ф. Гербарт</answer>
+			<answer id="4" isCorrect="0">А. Дистервег</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1">
+		<text>
+		К идеям программированного обучения наиболее близка теория…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">бихевиоризм</answer>
+			<answer id="2" isCorrect="0">прагматизм</answer>
+			<answer id="3" isCorrect="0">позитивизм</answer>
+			<answer id="4" isCorrect="0">гуманизм</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1">
+		<text>
+		Опыт творческой деятельности и эмоционально-ценностного отношения к миру был включен в состав содержания образования…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">В.В. Краевским, И.Я. Лернером</answer>
+			<answer id="2" isCorrect="0">В.С. Ледневым, Ю.К. Бабанским</answer>
+			<answer id="3" isCorrect="0">В.В. Давыдовым, Б.П. Есиповым</answer>
+			<answer id="4" isCorrect="0">М.Н. Скаткиным, Д.Д. Зуевым</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1">
+		<text>
+		При _____ структуре содержания образования один и тот же вопрос повторяется несколько раз, его содержание расширяется новыми сведениями, связями и зависимостями
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">концентрической</answer>
+			<answer id="2" isCorrect="0">линейной</answer>
+			<answer id="3" isCorrect="0">спиральной</answer>
+			<answer id="4" isCorrect="0">смешанной</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1">
+		<text>
+		Приоритетное развитие общекультурных компонентов в содержании образования - это…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">гуманитаризация</answer>
+			<answer id="2" isCorrect="0">гуманизация</answer>
+			<answer id="3" isCorrect="0">демократизация</answer>
+			<answer id="4" isCorrect="0">углубленное изучение</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1">
+		<text>
+		Дидактически обоснованная система знаний, умений и навыков, отражающая содержание науки, – это…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">учебный предмет</answer>
+			<answer id="2" isCorrect="0">образовательная область</answer>
+			<answer id="3" isCorrect="0">учебный план</answer>
+			<answer id="4" isCorrect="0">образовательная программа</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1">
+		<text>
+		Доведенное до автоматизма действие называется …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">навыком</answer>
+			<answer id="2" isCorrect="0">умением</answer>
+			<answer id="3" isCorrect="0">знанием</answer>
+			<answer id="4" isCorrect="0">поведением</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1">
+		<text>
+		К объектам стандартизации в образовании не относится …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">учебно-воспитательный план учителя</answer>
+			<answer id="2" isCorrect="0">содержание</answer>
+			<answer id="3" isCorrect="0">объем учебной нагрузки</answer>
+			<answer id="4" isCorrect="0">уровень подготовки обучающихся</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1">
+		<text>
+		Под содержанием образования понимают …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">педагогически адаптированную систему знаний, умений и навыков, опыта творческой деятельности и эмоционально-ценностного отношения к миру</answer>
+			<answer id="2" isCorrect="0">совокупность знаний, умений и навыков, развивающих устойчивые особенности отдельных психических процессов</answer>
+			<answer id="3" isCorrect="0">совокупность преемственных образовательных программ и государственных образовательных стандартов различного уровня и направленности</answer>
+			<answer id="4" isCorrect="0">финансовую поддержку государственных и общественных организаций средней и высшей школе</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1">
+		<text>
+		В понятие «качество обучения» не входит …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">уровень нравственной культуры учащихся</answer>
+			<answer id="2" isCorrect="0">степень успешности освоения учащимися образовательных программ</answer>
+			<answer id="3" isCorrect="0">мера реализации Государственного образовательного стандарта на личностном уровне</answer>
+			<answer id="4" isCorrect="0">уровень личностного взаимодействия учителя и учащихся в процессе обучения</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1">
+		<text>
+		Нормативным документом, раскрывающим содержание знаний, умений и навыков по учебному предмету, является …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">учебная программа</answer>
+			<answer id="2" isCorrect="0">учебный план</answer>
+			<answer id="3" isCorrect="0">базисный учебный план</answer>
+			<answer id="4" isCorrect="0">образовательный стандарт</answer>
+		</answers>
+	</question>
+	<question theme="1" answer="1">
+		<text>
+		Ведущим видом учебной литературы, содержащим систематическое изложение учебного материала, является …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">учебник</answer>
+			<answer id="2" isCorrect="0">учебное пособие</answer>
+			<answer id="3" isCorrect="0">методическое пособие</answer>
+			<answer id="4" isCorrect="0">методические рекомендации</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="1">
+		<text>
+		Классно-урочную систему теоретически обосновал…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">Я.А. Коменский</answer>
+			<answer id="2" isCorrect="0">К.Д. Ушинский</answer>
+			<answer id="3" isCorrect="0">Дж. Локк</answer>
+			<answer id="4" isCorrect="0">А. Дистерверг</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="3">
+		<text>
+		Внешнее выражение согласованной деятельности учителя и учащихся, осуществляемой в установленном порядке и определенном режиме, – это…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="0">процесс обучения</answer>
+			<answer id="2" isCorrect="0">метод обучения</answer>
+			<answer id="3" isCorrect="1">форма организации обучения</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="1">
+		<text>
+		По схеме «повторение пройденного материала – освоение нового материала – отработка навыков - применение знаний на практике – домашнее задание» проходит урок…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">комбинированный</answer>
+			<answer id="2" isCorrect="0">овладения новыми знаниями</answer>
+			<answer id="3" isCorrect="0">повторения и закрепления знаний</answer>
+			<answer id="4" isCorrect="0">обобщения и систематизации</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="1">
+		<text>
+		Среди понятий «урок», «структура урока», «форма организации обучения», «тип урока» наиболее частным является понятие …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">«структура урока»</answer>
+			<answer id="2" isCorrect="0">«урок»</answer>
+			<answer id="3" isCorrect="0">«форма организации обучения»</answer>
+			<answer id="4" isCorrect="0">«тип урока»</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="1">
+		<text>
+		Учебное занятие на старшей ступени обучения в форме коллективного обсуждения изучаемых вопросов – это …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">семинар</answer>
+			<answer id="2" isCorrect="0">факультатив</answer>
+			<answer id="3" isCorrect="0">консультация</answer>
+			<answer id="4" isCorrect="0">конференция</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="1">
+		<text>
+		Форма организации обучения, позволяющая изучать явления и процессы в естественных условиях, – это …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">учебная экскурсия</answer>
+			<answer id="2" isCorrect="0">практическое занятие</answer>
+			<answer id="3" isCorrect="0">лабораторное занятие</answer>
+			<answer id="4" isCorrect="0">дополнительное занятие</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="1">
+		<text>
+		Форма организации обучения, используемая для отработки практических умений и навыков, - это …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">практикум</answer>
+			<answer id="2" isCorrect="0">учебная конференция</answer>
+			<answer id="3" isCorrect="0">курс по выбору</answer>
+			<answer id="4" isCorrect="0">предметный урок</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="1">
+		<text>
+		Внеурочная форма организации обучения, направленная на формирование навыков самостоятельной работы, – это …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">домашняя работа</answer>
+			<answer id="2" isCorrect="0">экскурсия</answer>
+			<answer id="3" isCorrect="0">семинар</answer>
+			<answer id="4" isCorrect="0">консультация</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="1">
+		<text>
+		Форма организации обучения, при которой учитель ведет занятия в классе с постоянным составом учащихся одинакового уровня развития, по твердому расписанию и четко установленному регламенту, – это …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">урок</answer>
+			<answer id="2" isCorrect="0">факультатив</answer>
+			<answer id="3" isCorrect="0">занятие с отстающими</answer>
+			<answer id="4" isCorrect="0">семинар</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="1">
+		<text>
+		К основным типам уроков относятся уроки …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">изучения нового материала, формирования умений и навыков, обобщения и систематизации, контроля знаний и умений, комбинированные</answer>
+			<answer id="2" isCorrect="0">заучивания наизусть, демонстрации пособий, комбинирования, контроля</answer>
+			<answer id="3" isCorrect="0">индивидуальной и дифференцированной работы с учениками, обобщения и систематизации</answer>
+			<answer id="4" isCorrect="0">решения задач, выполнения опытов, написания сочинений</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="1">
+		<text>
+		По количеству учащихся и по особенностям взаимодействия учителя и учащихся выделяются формы организации обучения: индивидуальная, групповая и …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">фронтальная</answer>
+			<answer id="2" isCorrect="0">бригадная</answer>
+			<answer id="3" isCorrect="0">индивидуально-групповая</answer>
+			<answer id="4" isCorrect="0">классно-урочная</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="1">
+		<text>
+		К типам уроков, выделяемых в педагогике, не относится …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">деловая игра</answer>
+			<answer id="2" isCorrect="0">комбинированный урок</answer>
+			<answer id="3" isCorrect="0">урок изучения нового материала</answer>
+			<answer id="4" isCorrect="0">урок обобщения и систематизации знаний</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="1">
+		<text>
+		Достоинством классно-урочной системы является …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">экономичность</answer>
+			<answer id="2" isCorrect="0">индивидуальный подход к учащимся</answer>
+			<answer id="3" isCorrect="0">высокое качество усвоения знаний</answer>
+			<answer id="4" isCorrect="0">ориентация на “среднего” ученика</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="1">
+		<text>
+		Учебная экскурсия относится к …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">вспомогательным формам обучения</answer>
+			<answer id="2" isCorrect="0">видам обучения</answer>
+			<answer id="3" isCorrect="0">принципам обучения</answer>
+			<answer id="4" isCorrect="0">разновидности контроля знаний</answer>
+		</answers>
+	</question>
+	<question theme="2" answer="1">
+		<text>
+		К структурным компонентам урока не относится …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">диагностика интеллекта</answer>
+			<answer id="2" isCorrect="0">организационный момент</answer>
+			<answer id="3" isCorrect="0">проверка домашнего задания</answer>
+			<answer id="4" isCorrect="0">закрепление нового материала</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1">
+		<text>
+		Общеобразовательное учебное заведение для старшеклассников с углубленным изучением дисциплин по определенному профилю называется…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">лицеем</answer>
+			<answer id="2" isCorrect="0">гимназией</answer>
+			<answer id="3" isCorrect="0">колледжем</answer>
+			<answer id="4" isCorrect="0">прогимназией</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1">
+		<text>
+		Школа, опирающаяся на педагогическую концепцию одного педагога или коллектива учителей, называется…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">авторской</answer>
+			<answer id="2" isCorrect="0">профильной</answer>
+			<answer id="3" isCorrect="0">развивающей</answer>
+			<answer id="4" isCorrect="0">профессиональной</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1">
+		<text>
+		Частные образовательные учреждения и учреждения общественных и религиозных организаций относятся к группе ___ учреждений
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">негосударственных</answer>
+			<answer id="2" isCorrect="0">муниципальных</answer>
+			<answer id="3" isCorrect="0">специальных</answer>
+			<answer id="4" isCorrect="0">профильных</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1">
+		<text>
+		Учебное заведение, осуществляющее обучение и воспитание учащихся с 1-го по 11-й классы на основе углубленной, в том числе профильной предпрофессиональной подготовки, – это …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">гимназия</answer>
+			<answer id="2" isCorrect="0">прогимназия</answer>
+			<answer id="3" isCorrect="0">учебно-воспитательный комплекс</answer>
+			<answer id="4" isCorrect="0">реальное училище</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1">
+		<text>
+		Основанием деления школ на государственные, муниципальные и негосударственные является …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">организационно-правовая форма</answer>
+			<answer id="2" isCorrect="0">характер сообщаемых знаний</answer>
+			<answer id="3" isCorrect="0">направленность подготовки</answer>
+			<answer id="4" isCorrect="0">реализуемая программа</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1">
+		<text>
+		Авторской педагогической системой можно назвать опыт педагогической работы…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">А.С. Макаренко</answer>
+			<answer id="2" isCorrect="0">Ж.Ж. Руссо</answer>
+			<answer id="3" isCorrect="0">Ю.К. Бабанского</answer>
+			<answer id="4" isCorrect="0">Н.К. Крупской</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1">
+		<text>
+		Школы, где дети по собственному желанию или по воле родителей осваивают основы того или иного вероучения, называются …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">воскресными</answer>
+			<answer id="2" isCorrect="0">коммунами</answer>
+			<answer id="3" isCorrect="0">интернатом</answer>
+			<answer id="4" isCorrect="0">трудовыми</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1">
+		<text>
+		По уровню образования выделяются образовательные учреждения…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">начальные, средние, высшие</answer>
+			<answer id="2" isCorrect="0">общеобразовательные, профессиональные</answer>
+			<answer id="3" isCorrect="0">конфессиональные, светские</answer>
+			<answer id="4" isCorrect="0">мужские, женские</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1">
+		<text>
+		Вновь образуемые и реорганизованные учебные заведения, дающие среднее специальное профессиональное образование или начальный цикл высшей школы, называются…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">колледжами</answer>
+			<answer id="2" isCorrect="0">учебно-воспитательными комплексами</answer>
+			<answer id="3" isCorrect="0">комплексами «школа-вуз»</answer>
+			<answer id="4" isCorrect="0">лицеями при вузе</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1">
+		<text>
+		Свойственные учебному заведению цели, задачи, содержание и организация учебно-воспитательного процесса характеризуют…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">тип школы</answer>
+			<answer id="2" isCorrect="0">уровень образования</answer>
+			<answer id="3" isCorrect="0">вид образовательного учреждения</answer>
+			<answer id="4" isCorrect="0">инновационные процессы</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1">
+		<text>
+		Основной целью создания различных типов образовательных учреждений является …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">возрождение интеллектуального и духовного потенциала общества</answer>
+			<answer id="2" isCorrect="0">создание единого образовательного пространства</answer>
+			<answer id="3" isCorrect="0">обеспечение взаимосвязи теории и практики</answer>
+			<answer id="4" isCorrect="0">регламентация учебного процесса</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1">
+		<text>
+		Учебно-воспитательное учреждение, являющееся базовым элементом образовательной системы, называется …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">школой</answer>
+			<answer id="2" isCorrect="0">училищем</answer>
+			<answer id="3" isCorrect="0">университетом</answer>
+			<answer id="4" isCorrect="0">институтом</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1">
+		<text>
+		Учебное заведение, сочетающее обучение и научную деятельность, смысл которого изначально понимался как «союз людей заинтересованных в науке», называется …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">университетом</answer>
+			<answer id="2" isCorrect="0">высшей школой</answer>
+			<answer id="3" isCorrect="0">академией</answer>
+			<answer id="4" isCorrect="0">институтом</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1">
+		<text>
+		В классификацию образовательных учреждений по организационно-правовым формам не входят ___ учреждения
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">военные</answer>
+			<answer id="2" isCorrect="0">государственные</answer>
+			<answer id="3" isCorrect="0">негосударственные</answer>
+			<answer id="4" isCorrect="0">муниципальные</answer>
+		</answers>
+	</question>
+	<question theme="3" answer="1">
+		<text>
+		В общеобразовательных учреждениях невозможно получить ___ образование
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">начальное профессиональное</answer>
+			<answer id="2" isCorrect="0">начальное общее</answer>
+			<answer id="3" isCorrect="0">основное общее</answer>
+			<answer id="4" isCorrect="0">среднее общее</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1">
+		<text>
+		По масштабу вносимых изменений педагогические инновации подразделяются на…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">локальные, модульные, системные</answer>
+			<answer id="2" isCorrect="0">внешние, внутренние, ресурсные</answer>
+			<answer id="3" isCorrect="0">ресурсные, образовательные, содержательные</answer>
+			<answer id="4" isCorrect="0">организационные, дидактические, методические</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1">
+		<text>
+		Управленческий процесс создания, оценки, освоения и применения педагогическим сообществом педагогических новшеств называется…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">инновационным</answer>
+			<answer id="2" isCorrect="0">преобразовательным</answer>
+			<answer id="3" isCorrect="0">творческим</answer>
+			<answer id="4" isCorrect="0">передовым</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1">
+		<text>
+		Полная реконструкция школы как образовательного учреждения предполагается при ___ изменениях
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">системных</answer>
+			<answer id="2" isCorrect="0">локальных</answer>
+			<answer id="3" isCorrect="0">модульных</answer>
+			<answer id="4" isCorrect="0">ресурсных</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1">
+		<text>
+		Внедрение в начальной школе дидактической системы развивающего обучения Л.В. Занкова соответствует ___ изменениям
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">модульным</answer>
+			<answer id="2" isCorrect="0">локальным</answer>
+			<answer id="3" isCorrect="0">системным</answer>
+			<answer id="4" isCorrect="0">внутренним</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1">
+		<text>
+		Инновации являются результатом…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">научного поиска</answer>
+			<answer id="2" isCorrect="0">социально-политических изменений</answer>
+			<answer id="3" isCorrect="0">выполнения заказа администрации</answer>
+			<answer id="4" isCorrect="0">непроизвольно полученным при развитии учреждения</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1">
+		<text>
+		Дифференциация обучения, определяющая оптимальный режим работы учащихся с учетом их индивидуальных особенностей, называется…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">внутренней</answer>
+			<answer id="2" isCorrect="0">внешней</answer>
+			<answer id="3" isCorrect="0">разноуровневой</answer>
+			<answer id="4" isCorrect="0">профильной</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1">
+		<text>
+		Учет в процессе обучения индивидуальных особенностей учащихся – это…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">индивидуализация</answer>
+			<answer id="2" isCorrect="0">дифференциация</answer>
+			<answer id="3" isCorrect="0">оптимизация</answer>
+			<answer id="4" isCorrect="0">интеграция</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1,3">
+		<text>
+		Общая одаренность детей проявляется в…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">способностях к музыке, рисованию</answer>
+			<answer id="2" isCorrect="0">дисциплинированности</answer>
+			<answer id="3" isCorrect="1">самостоятельности, критичности мышления</answer>
+			<answer id="4" isCorrect="0">инициативности</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1">
+		<text>
+		Нововведения, разрабатываемые и проводимые работниками и организациями системы образования, называются педагогическим(-и) …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">инновациями</answer>
+			<answer id="2" isCorrect="0">опытом</answer>
+			<answer id="3" isCorrect="0">реформами</answer>
+			<answer id="4" isCorrect="0">мастерством</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1">
+		<text>
+		К педагогическим инновациям можно отнести изменения в…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">содержании образования</answer>
+			<answer id="2" isCorrect="0">структуре системы образования</answer>
+			<answer id="3" isCorrect="0">оборудовании учебных заведений</answer>
+			<answer id="4" isCorrect="0">статусе образования</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1">
+		<text>
+		Ориентация на направленность личности, её ценностные ориентации, жизненные планы, мотивы деятельности и поведения – основа ___ подхода
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">личностного</answer>
+			<answer id="2" isCorrect="0">системного</answer>
+			<answer id="3" isCorrect="0">индивидуально-дифференцированного</answer>
+			<answer id="4" isCorrect="0">культурологического</answer>
+			<answer id="5" isCorrect="0">антропологического</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1">
+		<text>
+		Наука, занимающаяся изучением новообразований, новых явлений в разных сферах деятельности человека, называется …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">инноватикой</answer>
+			<answer id="2" isCorrect="0">прогностикой</answer>
+			<answer id="3" isCorrect="0">футурологией</answer>
+			<answer id="4" isCorrect="0">системологией</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1">
+		<text>
+		Форма и результат открытия, носитель новых свойств и характеристик какого-то предмета называется ….
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">новшеством</answer>
+			<answer id="2" isCorrect="0">новизной</answer>
+			<answer id="3" isCorrect="0">изобретением</answer>
+			<answer id="4" isCorrect="0">моделью</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1">
+		<text>
+		Инновации в образовании – это …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">распространение новшеств в педагогической практике</answer>
+			<answer id="2" isCorrect="0">оригинальность школьной жизни</answer>
+			<answer id="3" isCorrect="0">консервативный подход в образовании</answer>
+			<answer id="4" isCorrect="0">творческий подход к педагогической деятельности</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1">
+		<text>
+		К основным объектам инновационных преобразований в педагогической системе не относится …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">социальная среда</answer>
+			<answer id="2" isCorrect="0">педагогическая технология</answer>
+			<answer id="3" isCorrect="0">содержание образования</answer>
+			<answer id="4" isCorrect="0">управление школой</answer>
+		</answers>
+	</question>
+	<question theme="4" answer="1">
+		<text>
+		Нововведения в педагогической системе, улучшающие течение и результаты образовательного процесса, называются …
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">инновациями</answer>
+			<answer id="2" isCorrect="0">развитием</answer>
+			<answer id="3" isCorrect="0">прогрессом</answer>
+			<answer id="4" isCorrect="0">корректировкой</answer>
+		</answers>
+	</question>
+</questions>
+</test>

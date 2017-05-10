@@ -3,23 +3,35 @@
 
 {% block content %}
 <div class="container">
-  <form action="{% url 'tests:studentAnswer' question.theme_id question.id question.complexity%}" method="post">
+  <form action="{% url 'tests:studentAnswer' question.theme_id question.id%}" method="post">
     <h2>{{question.questionName}}</h2>
 
     {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
-
     {% csrf_token %}
+    <ul class="list-group">
     {% for answer in question.answer_set.all %}
       {% if question.answer_set.all.count != 1 %}
+      <li class="list-group-item">
         {% if question.getRightAnswersCount %}
-          <input type="radio" name="answer" id="answer{{ forloop.counter }}" value="{{ answer.id }}" />
+        <div class="radio">
+          <label for="answer{{ forloop.counter }}">
+            <input type="radio" name="answer" id="answer{{ forloop.counter }}" value="{{ answer.id }}" />
+            {{ answer.answerText }}
+          </label>
+        </div>
         {% else %}
-          <input type="checkbox" name="answer" id="answer{{ forloop.counter }}" value="{{ answer.id }}" />
+        <div class="checkbox">
+          <label for="answer{{ forloop.counter }}">
+            <input type="checkbox" name="answer" id="answer{{ forloop.counter }}" value="{{ answer.id }}" />
+            {{ answer.answerText }}
+          </label>
+        </div>
         {% endif %}
-        <label for="answer{{ forloop.counter }}">{{ answer.answerText }}</label><br />
       {% endif %}
+      </li>
     {% endfor %}
-  <input type="submit" value="Дальше" />
+    </ul>
+  <input type="submit" class="btn btn-default" value="Дальше" />
 </div>
 {% endblock %}

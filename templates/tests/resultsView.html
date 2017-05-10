@@ -4,8 +4,13 @@
 
 {% block content %}
 <div class="container">
-  {% for item in results %}
-    <li><a href="{% url 'tests:testDetails' item.id %}">{{ item.name }}</a></li>
-  {% endfor %}
+  <ul class="list-group col-md-6 col-md-offset-3">
+    {% for item in results %}
+    <li class="list-group-item ">
+      <a href="{% url 'tests:resultDetails' item.id %}">{{ item.name }}</a>
+      <span class="badge">14</span>
+    </li>
+    {% endfor %}
+  </ul>
 </div>
 {% endblock %}

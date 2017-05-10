@@ -29,7 +29,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'students',
     'tests',
-    'mathfilters'
+    'mathfilters',
+    'crispy_forms',
+    'bootstrap3',
 ]
 
 SITE_ID = 1
@@ -121,8 +123,22 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media1')
 MEDIA_URL = '/media1/'
 
+BOOTSTRAP3 = {
+    'jquery_url': '//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js',
+    'base_url': os.path.join(STATIC_URL, 'bootstrap'),
+    'theme_url': os.path.join(STATIC_URL, 'bootstrap/css/bootstrap.min.css'),
+    # Label class to use in horizontal forms
+    'horizontal_label_class': 'col-md-3',
+
+    # Field class to use in horizontal forms
+    'horizontal_field_class': 'col-md-8',
+}
+
 REGISTRATION_OPEN = True
 ACCOUNT_ACTIVATION_DAYS = 7
 REGISTRATION_AUTO_LOGIN = True
 LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 LOGIN_URL = '/accounts/login/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
