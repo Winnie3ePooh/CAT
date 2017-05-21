@@ -1,11 +1,15 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
+from django.template.loader import render_to_string
 from django.urls import reverse
 from django.views import generic
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from registration.forms import RegistrationForm
 from .forms import *
+from django.contrib.auth import login
+
+import datetime
 
 def index(request):
     return render(request,'index.html')
@@ -38,3 +42,32 @@ def allUsers(request):
         users = paginator.page(paginator.num_pages)
 
     return render(request, 'students/index.html', {'users': users})
+
+def register(request):
+    registered = False
+    if request.method == 'POST':
+        user_form = UserForm(data=request.POST)
+        print(request.POST)
+        if user_form.is_valid():
+            user = user_form.save()
+            user.set_password(user.password)
+            user.save()
+            group = StudyGroup.objects.get(pk=request.POST['groupName'])
+            print(group)
+            profile = UserProfile(user=user,studygroup=group)
+            profile.save()
+            registered = True
+        else:
+            user_form.errors#, profile_form.errors
+        if registered:
+            login(request, user)
+            return HttpResponseRedirect('/')
+        return HttpResponseRedirect('/')
+    else:
+        user_form = UserForm()
+        profile = ProfileForm()
+        profile = render_to_string('basePicker.html',{'form':profile},request)
+
+    return render(request,
+            'registration/registration_form.html',
+            {'user_form': user_form,'form':profile} )

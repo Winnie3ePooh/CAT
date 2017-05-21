@@ -34,6 +34,27 @@ $(document).ready(function() {
         }
       });
   });
+
+  $('.getStats').click(function(){
+  	var pathname = window.location.pathname.split("/");
+    var catid = $('.select2-selection__rendered').text();
+    var cUrl = ($(this).attr('data-type') == 'group') ? 'groupsTestDetails':'usersTestDetails';
+    alert(cUrl);
+    $.ajax({
+        url: '/tests/'+cUrl+'/'+pathname[pathname.length-2]+'/',
+        type: "POST",
+        data: {
+          'group': catid
+        },
+        success: function (data) {
+          $('#groupRender').html(data);
+        },
+        error: function (data){
+        	alert('NOPE');
+        }
+      });
+  });
+
   $('.add').click(function(){
     $.ajax({
         url: '/tests/questionCreate/',
@@ -62,5 +83,37 @@ $(document).ready(function() {
           }
         }
       });
+  });
+
+  function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie != '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[i]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+var csrftoken = getCookie('csrftoken');
+function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+}
+$.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        }
+    }
+});
+
+  $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
   });
 });

@@ -4,13 +4,31 @@
 
 {% block content %}
 <div class="container">
-  <ul class="list-group col-md-6 col-md-offset-3">
-    {% for item in results %}
-    <li class="list-group-item ">
-      <a href="{% url 'tests:resultDetails' item.id %}">{{ item.name }}</a>
-      <span class="badge">14</span>
-    </li>
-    {% endfor %}
-  </ul>
+  <table class="table table-striped table-hover ">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Студент</th>
+        <th>Сдано или нет</th>
+        <th>Правильные ответы</th>
+        <th>Неправильные ответы</th>
+        <th>Сумма баллов</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+          {% for item in results %}
+          <tr>
+            <td>1</td>
+            <td>{{ item.user }}</td>
+            <td>{{ item.isPassed }}</td>
+            <td>{{ item.rightAnswers }}</td>
+            <td>{{ item.wrongAnswers }}</td>
+            <td>{{ item.score }}</td>
+            <td><a href="{% url 'tests:resultDetails' item.id %}" class="btn btn-info" role="button">Просмотреть</a></td>
+          </tr>
+          {% endfor %}
+    </tbody>
+  </table>
 </div>
 {% endblock %}

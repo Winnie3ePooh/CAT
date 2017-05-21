@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+
+<name>Теория обучения</name>
+<give>теории обучения</give>
+<category>Педагогика</category>
+<description></description>
+
+<themes>
+	<theme id="0">сущность, движущие силы, логика процесса обучения</theme>
+</themes>
+
+<questions>
+	<question theme="0" answer="1">
+		<text>
+		Наука об обучении, образовании, их целях, содержании, методах, средствах называется…
+		</text>
+		<answers>
+			<answer id="1" isCorrect="1">дидактикой</answer>
+			<answer id="2" isCorrect="0">теорией воспитания</answer>
+			<answer id="3" isCorrect="0">педагогическим менеджментом</answer>
+			<answer id="4" isCorrect="0">педагогической технологией</answer>
+		</answers>
+	</question>
+</questions>
+</test>

@@ -46,6 +46,8 @@ NORMILIZED = {
     }
 }
 
+weights = { 'Easy':0, 'EasyMedium':1, 'Medium':2, 'MediumHard':3, 'Hard':4 }
+
 def getNextDiff(curr,currDif):
     for value in NORMILIZED[currDif].items():
         if (curr >= value[-1][0]) and (curr <= value[-1][1]):
@@ -79,12 +81,18 @@ def setNextDiff(request):
     maxVal = processing[max(processing, key=processing.get)]
     if remIt:
         data["Results"]["right"] = 0
+    updateThemesList = {}
     for item, value in processing.items():
         p = value
         rSum.append(p)
         data["Themes"][item]["normalizedValue"] = p
         data["Themes"][item]["currDiff"] = getNextDiff(p,data["Themes"][item]["currDiff"])
+        updateThemesList[item] = weights[data["Themes"][item]["currDiff"]]
     print(data['Themes'])
+    UTL = sorted(updateThemesList.items(), key=lambda x: x[1],reverse=True)
+    request.session['themeID'] = [i[0] for i in UTL]
+    print(request.session['themeID'])
+    print('OOOOOOOOOOOOOOOOOOO')
     with open(request.session['filePath']) as f:
         dt = json.load(f)
     dt['Bayes'].append(data)

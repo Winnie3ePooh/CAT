@@ -1,9 +1,16 @@
 from django import forms
 from tests.models import *
+from students.models import *
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import *
 from crispy_forms.bootstrap import *
+from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
+from django_select2.forms import (
+    HeavySelect2MultipleWidget, HeavySelect2Widget, ModelSelect2MultipleWidget,
+    ModelSelect2TagWidget, ModelSelect2Widget, Select2MultipleWidget,
+    Select2Widget
+)
 
 class UploadFileForm(forms.Form):
     title = forms.CharField(
@@ -11,43 +18,66 @@ class UploadFileForm(forms.Form):
         max_length=50,
         required = False,
     )
-    CHOICES=((True,'Да'),
-                (False,'Нет'))
-    is_visible = forms.ChoiceField(
-        choices=CHOICES,
-        widget=forms.RadioSelect,
-        initial='True',
-        required=True
-    )
+
+    CHOICES = ((True, 'Да',), (False, 'Нет',))
+    publicResults = forms.ChoiceField(widget=forms.RadioSelect, choices=CHOICES)
+
     file = forms.FileField(
         label = "Выберите файл",
         required=True
     )
+
+class StudyGroupsForm(forms.ModelForm):
+    class Meta:
+        model = StudyGroup
+        fields = ('groupName',)
+        widgets = {
+            'groupName': ModelSelect2MultipleWidget(
+                            queryset=StudyGroup.objects.all(),
+                            search_fields=['groupName__icontains']
+                        )
+        }
+
+class ChoosingGroupForm(forms.Form):
+    group = forms.ModelChoiceField(
+        queryset=StudyGroup.objects.all(),
+        label='Группа',
+        widget=ModelSelect2Widget(
+            model=StudyGroup,
+            search_fields=['groupName__icontains']
+        )
+    )
+
     def __init__(self, *args, **kwargs):
-        super(UploadFileForm, self).__init__(*args, **kwargs)
-        self.helper = FormHelper()
-        self.helper.form_class = 'form-horizontal'
-        self.helper.label_class = 'col-lg-2'
-        self.helper.field_class = 'col-lg-8'
-        self.helper.form_method = 'post'
-        self.helper.form_action = '.'
-        self.helper.add_input(Submit('submit', 'Загрузить',onclick="$('#myPleaseWait').modal('show');"))
+        group = kwargs.pop('groupName', None)
+        super(ChoosingGroupForm, self).__init__(*args, **kwargs)
+
+        if group:
+            self.fields['group'].queryset = StudyGroup.objects.filter(groupName__in=group)
+
+class UserModelChoiceField(forms.ModelChoiceField):
+    def label_from_instance(self, obj):
+         return obj.get_full_name()
+
+class ChoosingStudentForm(forms.Form):
+    students = UserModelChoiceField(
+        queryset=User.objects.all(),
+        label='Студент',
+        widget=ModelSelect2Widget(
+            model=User,
+            search_fields=['first_name__icontains','last_name__icontains']
+        )
+    )
+
+    def __init__(self, *args, **kwargs):
+        group = kwargs.pop('groupName', None)
+        super(ChoosingStudentForm, self).__init__(*args, **kwargs)
+
+        if group:
+            self.fields['students'].queryset = User.objects.distinct().filter(userprofile__studygroup__groupName__in=group)
+
 
 class QuestionForm(forms.ModelForm):
-    # def __init__(self, *args, **kwargs):
-    #     super(QuestionForm, self).__init__(*args, **kwargs)
-    #     self.helper = FormHelper(self)
-    #     self.helper.form_tag = False
-    #     self.helper.form_class = 'form-horizontal'
-    #     self.helper.label_class = 'col-lg-3'
-    #     self.helper.field_class = 'col-lg-8'
-    #     self.helper.layout = Layout(
-    #         'Вопрос',
-    #         'theme',
-    #         'questionName',
-    #         'qType'
-    #     )
-
     class Meta:
         model = Question
         fields = ['theme','questionName']
@@ -57,14 +87,6 @@ class QuestionForm(forms.ModelForm):
         }
 
 class AnswerForm(forms.ModelForm):
-    # def __init__(self, *args, **kwargs):
-    #     super(AnswerForm, self).__init__(*args, **kwargs)
-    #     self.helper = FormHelper(self)
-    #     self.helper.form_tag = False
-    #     self.helper.form_class = 'form-horizontal'
-    #     self.helper.label_class = 'col-lg-3'
-    #     self.helper.field_class = 'col-lg-8'
-
     class Meta:
         model = Answer
         fields = ['answerText','isRight']

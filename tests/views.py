@@ -82,19 +82,17 @@ def startTesting(request):
         request.session['calibQuest'] = []
         request.session['exclude'] = []
         request.session['excludeID'] = []
-        request.session['checkEnd'] = 0
+        request.session['score'] = 0
         request.session['testName'] = currSubject.subjectName
         request.session['lvl'] = 0
         request.session['checking'] = True
         for item in themeID:
             request.session['calibQuest'].extend(Question.objects.filter(theme_id= item, complexity__range=DIFF['Medium']).values_list('id',flat=True).order_by('?')[:3])
         #request.session['calibQuest'] = list(Question.objects.all().values_list('id',flat=True))
-        request.session['score'] = 0
     if request.session['calibQuest']:
         listCopy = request.session['calibQuest']
         questionID = listCopy.pop()
         #request.session['exclude'].append({questionID:''})
-        request.session['excludeID'].append(questionID)
         request.session['calibQuest'] = listCopy
         question = Question.objects.get(pk=questionID)
         return render(request, 'tests/test.html', {'question': question})
@@ -105,9 +103,12 @@ def startTesting(request):
 
 def getNextQuestion(request):
     checking = nbc.setNextDiff(request)
-    print(checking)
+    print('OLOLO {} {}'.format(checking,request.session['lvl']))
+    print(len(request.session['excludeID']))
+    print('БАЛЛЫ {}'.format(request.session['score']/len(request.session['excludeID'])))
+    score = 10*request.session['score']/len(request.session['excludeID'])
     #print(math.fabs((request.session['lvl']-checking)))
-    if  0.2 <= checking <= 0.6 and request.session['checkEnd'] <= 3 and math.fabs(checking-request.session['lvl']) >= 0.1:
+    if  0.2 <= checking <= 0.6 and math.fabs(checking-request.session['lvl']) >= 0.01:
         request.session['lvl'] = checking
         themeID = str(request.session['themeID'].pop())
         cmpl = DIFF[request.session['testStatistic']['Themes'][themeID]['currDiff']]
@@ -125,17 +126,24 @@ def getNextQuestion(request):
         else:
             return HttpResponseRedirect(reverse('tests:getNextQuestion'))
     else:
+        testsStatistics, flag = TestsStatistic.objects.get_or_create(subject_id=request.session['subjectID'])
+        testsStatistics.all += 1
+        isPassed = False
+        endFlag = 'ЗАГЛУШКА'
         if checking >= 0.6:
             endFlag = 'Достигнут нужный уровень'
+            isPassed = True
+            testsStatistics.passed += 1
         elif checking <= 0.2:
             endFlag = 'Ну вообще'
-        else:
-            endFlag = 'Допущено {} подряд ошибок'.format(request.session['checkEnd'])
+            isPassed = False
         res = request.session['testStatistic']['Results']
-        result = Result(user=request.user,name=request.session['testName'],
+        result = Result(user=request.user,
+                        subject=Subject.objects.get(pk=request.session['subjectID']),
                         filePath=request.session['filePath'].split('\\')[-1],
                         rightAnswers=res['right'],wrongAnswers=res['wrong'],
-                        isVisible=True)
+                        score=score,
+                        isPassed=isPassed)
         result.save()
         return render(request, 'tests/results.html',{'results': result,'main': request.session['mainStatistic']['Results'],'calib':request.session['calibStatistic'],'endFlag':endFlag})
 
@@ -166,10 +174,9 @@ def studentAnswer(request, themeID, questionID):
         currQuestion.save()
         if check:
             #request.session['score'] += 4*(100-round(float(cmplty)))/100
-            request.session['checkEnd'] = 0
+            request.session['score'] +=1
             request.session['mainStatistic']['Results']['right'] += 1
         else:
-            request.session['checkEnd'] += 1
             request.session['mainStatistic']['Results']['wrong'] += 1
         if request.session['calib']:
             return HttpResponseRedirect(reverse('tests:startTesting'))
@@ -188,11 +195,13 @@ def uploadFile(request):
             with open(currPath, 'wb+') as destination:
                 for chunk in request.FILES['file'].chunks():
                     destination.write(chunk)
-            processingTestsFile(currPath,request)
+            processingTestsFile(currPath,request,uploadForm)
             return HttpResponseRedirect('/')
     else:
         uploadForm = UploadFileForm()
-    return render(request, 'tests/upload.html', {'uploadForm': uploadForm})
+        groups = StudyGroupsForm()
+        groups = render_to_string('picker.html',{'form':groups},request)
+    return render(request, 'tests/upload.html', {'uploadForm': uploadForm,'groups':groups})
 
 def myTests(request):
     user_tests = Subject.objects.all().filter(user=request.user).order_by('subjectName')
@@ -222,6 +231,43 @@ def testDetails(request, testID):
     except EmptyPage:
         questions = paginator.page(paginator.num_pages)
     return render(request, 'tests/testDetails.html', {'questions': questions})
+
+def groupsTestDetails(request, testID=None):
+    print('ЗАШЁЛ')
+    subj = Subject.objects.get(pk=testID).studygroup.all().values_list('groupName')
+    print(subj)
+    if request.method == 'POST':
+        group = request.POST['group']
+        results = Result.objects.filter(subject__studygroup__groupName=group)
+        data = {
+            'group': group,
+            'total': results.count(),
+            'right': results.filter(isPassed=True).count(),
+            'results': results
+        }
+        return HttpResponse(render_to_string('tests/testGroupStats.html',{'data':data},request))
+    form = ChoosingGroupForm(groupName=subj)
+    return render(request,'picker.html',{'form':form,'flag':'group'})
+
+def usersTestDetails(request, testID):
+    print('ЗАШЁЛ')
+    print(User.objects.all())
+    subj = Subject.objects.get(pk=testID).studygroup.all().values_list('groupName')
+    print(subj)
+    if request.method == 'POST':
+        group = request.POST['group']
+        group = group.split(' ')
+        print(group)
+        results = Result.objects.filter(user__first_name=group[0],user__last_name=group[1])
+        data = {
+            'group': group,
+            'total': results.count(),
+            'right': results.filter(isPassed=True).count(),
+            'results': results
+        }
+        return HttpResponse(render_to_string('tests/testGroupStats.html',{'data':data},request))
+    form = ChoosingStudentForm(groupName=subj)
+    return render(request,'picker.html',{'form':form,'flag':'user'})
 
 def deleteTest(request):
     if request.method == 'GET':
@@ -293,12 +339,25 @@ def questionDelete(request):
     }
     return JsonResponse(data)
 
-def processingTestsFile(fPath,request):
+def processingTestsFile(fPath,request,uploadForm):
     themes=[]
     root = ET.parse(fPath).getroot()
+    disc = root.find('category')
+    try:
+        print('OLOLO RABOTAET')
+        discipline = Discipline.objects.get(disciplineName=disc.text)
+    except Discipline.DoesNotExist:
+        discipline = Discipline(disciplineName=disc.text)
+        discipline.save()
     for name in root.iter('name'):
-        subj = Subject(subjectName=name.text,user=request.user)
+        print(request.POST)
+        subj = Subject(discipline=discipline,
+                       subjectName=name.text,
+                       user=request.user,
+                       publicResults=request.POST['publicResults'])
         subj.save()
+        for item in request.POST.getlist('groupName'):
+            subj.studygroup.add(item)
 
     for child in root.iter('theme'):
         theme = Theme(themeName=child.text, subject=subj)
@@ -314,3 +373,4 @@ def processingTestsFile(fPath,request):
             else:
                 answer = Answer(answerText=ans.text, isRight = False, question=quest)
             answer.save()
+    return subj

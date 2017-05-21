@@ -1,6 +1,7 @@
 from django.db import models
 import random
 from django.contrib.auth.models import User
+from students.models import *
 
 
 def randomCompl():
@@ -13,12 +14,15 @@ class Subject(models.Model):
     discipline = models.ForeignKey(Discipline, on_delete=models.CASCADE,null=True,blank=True)
     subjectName = models.CharField(max_length=200)
     user = models.ForeignKey(User, on_delete=models.CASCADE,default=0)
+    studygroup = models.ManyToManyField(StudyGroup,related_name='groups')
+    publicResults = models.BooleanField(default=False)
     def __str__(self):
         return self.subjectName
 
-class TestSettings(models.Model):
-    subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
-    publicResults = models.BooleanField(default=False)
+class TestsStatistic(models.Model):
+    subject = models.OneToOneField(Subject)
+    passed = models.IntegerField(default=0)
+    all = models.IntegerField(default=0)
 
 class Theme(models.Model):
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
@@ -51,8 +55,9 @@ class Answer(models.Model):
 
 class Result(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    name = models.CharField(max_length=200, default='')
+    subject = models.ForeignKey(Subject)
     filePath = models.CharField(max_length=100, default='')
     rightAnswers = models.IntegerField(default=0)
     wrongAnswers = models.IntegerField(default=0)
-    isVisible = models.BooleanField(default=True)
+    score = models.FloatField(default=0)
+    isPassed = models.BooleanField(default=True)

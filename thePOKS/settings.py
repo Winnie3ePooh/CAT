@@ -30,8 +30,8 @@ INSTALLED_APPS = [
     'students',
     'tests',
     'mathfilters',
-    'crispy_forms',
     'bootstrap3',
+    'django_select2'
 ]
 
 SITE_ID = 1
@@ -140,5 +140,3 @@ REGISTRATION_AUTO_LOGIN = True
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 LOGIN_URL = '/accounts/login/'
-
-CRISPY_TEMPLATE_PACK = 'bootstrap3'

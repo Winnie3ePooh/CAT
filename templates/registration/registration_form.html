@@ -1,13 +1,39 @@
 {% extends "base.html" %}
 {% load i18n %}
-
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<head>
+  {{ form.media.css }}
+  <style type="text/css">
+    select {
+      width: 200px;
+    }
+  </style>
+</head>
 {% block content %}
 <div class="container">
-  <form method="post" action=".">
-    {% csrf_token %}
-    {{ form.as_p }}
-
-    <input type="submit" value="{% trans 'Submit' %}" />
-  </form>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <legend>Регистрация</legend>
+      <form method="post" action="." class="form-horizontal">
+        <fieldset>
+        {% csrf_token %}
+        {% bootstrap_form user_form label_class='col-lg-4 control-label' field_class='col-lg-5'%}
+        {{ form }}
+        <div class="form-group">
+          <input onclick="$('#myPleaseWait').modal('show');" class="update-submit btn btn-primary" type="submit" value="Submit data">
+        </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
 </div>
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+  window.onerror = function (msg) {
+    $("body").attr("JSError", msg);
+  }
+</script>
+{{ form.media.js }}
 {% endblock %}

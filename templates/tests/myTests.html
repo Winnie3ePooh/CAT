@@ -19,6 +19,9 @@
          <div id="c{{ test.id }}" class="panel-collapse collapse">
           <div class="panel-body">
            <a href="{% url 'tests:testDetails' test.id %}" class="btn btn-info" role="button">Просмотреть</a>
+           <a href="{% url 'tests:testDetails' test.id %}" class="btn btn-info" role="button">Общая статистика</a>
+           <a href="{% url 'tests:groupsTestDetails' test.id %}" class="btn btn-info" role="button">Статистика по группам</a>
+           <a href="{% url 'tests:usersTestDetails' test.id %}" class="btn btn-info" role="button">Статистика пользователей</a>
            <button class="btn btn-warning delete" type="button" data-testid="{{test.id}}">Удалить</button>
           </div>
          </div>

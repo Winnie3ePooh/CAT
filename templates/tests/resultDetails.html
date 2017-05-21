@@ -11,7 +11,8 @@
   Из них правильно: {{result.rightAnswers}} <br/>
   Неправильно:  {{result.wrongAnswers}}<br/>
   <br/>
-
-  <a class="btn btn-info" href="{% url 'tests:detailedReport' result.id%}">Подробно</a>
+  {% if result.subject.publicResults %}
+    <a class="btn btn-info" href="{% url 'tests:detailedReport' result.id%}">Подробно</a>
+  {%endif%}
 </div>
 {% endblock %}

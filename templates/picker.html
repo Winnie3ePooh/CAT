@@ -1,0 +1,87 @@
+{% load staticfiles %}
+{% load staticfiles %}
+{% load i18n %}
+{% load students_extras %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+  {{ form.media.css }}
+  <style type="text/css">
+    .select2-container {
+        margin-left: 20px;
+    }
+      select {
+          width: 300px;
+      }
+  </style>
+</head>
+<body>
+<div id="header">
+    {% block header %}
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              {% if user.is_authenticated %}
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Добро пожаловать, {{ user.username }}!<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="{% url 'students:details' %}">Личная страница</a></li>
+                    <li><a href="{% url 'tests:usersTests' %}">Результаты</a></li>
+                    {% if user|has_group:"teachers" %}
+                      <li><a href="{% url 'tests:uploadFile' %}">Добавить тест</a></li>
+                    {% endif %}
+
+                    <li class="divider"></li>
+                    <li><a href="{% url 'tests:myTests' %}">Тесты</a></li>
+                    <li class="divider"></li>
+                    {% if user.is_staff %}
+                      <li><a href="{% url 'students:allUsers' %}">Все пользователи</a></li>
+                    {% endif %}
+                  </ul>
+                </li>
+                <li><a href="{% url 'students:index' %}" class="btn btn-default">Домой</a></li>
+                <li><a href="{% url 'auth_password_change' %}" class="btn btn-default">{% trans "Change password" %}</a></li>
+                <li><a href="{% url 'tests:indexSub' %}" class="btn btn-default">Тесты</a></li>
+              {% endif %}
+            </ul>
+            {% if user.is_authenticated %}
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="{% url 'auth_logout' %}">{% trans "Log out" %}</a></li>
+              </ul>
+              {% else %}
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="{% url 'auth_login' %}">{% trans "Log in" %}</a></li>
+              </ul>
+            {% endif %}
+          </div>
+        </div>
+      </nav>
+    {% endblock %}
+  </div>
+<div class="container">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        {% csrf_token %}
+        {{ form }}
+        <button data-type="{{ flag }}" class="btn btn-warning getStats" type="button">Просмотреть</button>
+      </div>
+    </div>
+    <div id="groupRender">
+    </div>
+</div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="{% static 'js/my-ajax.js' %}"></script>
+    <script src="{% static 'js/d3.v3.min.js' %}"></script>
+
+</body>
+<script type="text/javascript">
+  window.onerror = function (msg) {
+    $("body").attr("JSError", msg);
+  }
+</script>
+{{ form.media.js }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>

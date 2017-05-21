@@ -1,17 +1,18 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load tests_extras %}
 
 {% block content %}
 <div class="container">
-  {% for disc in all_disciplines %}
+  {% for disc in all_disciplines|checkNotNull:request.user %}
   <div class="panel panel-primary">
    <div class="panel-heading">
      <h4 class="panel-title">
-       <a data-toggle="collapse" data-parent="#collapse-group" href="#el1">{{disc.disciplineName}}</a>
+       <a data-toggle="collapse" data-parent="#collapse-group" href="#d{{disc.id}}">{{disc.disciplineName}}</a>
      </h4>
    </div>
-     <div id="el1" class="panel-collapse collapse">
-       {% for sub in disc.subject_set.all %}
+     <div id="d{{disc.id}}" class="panel-collapse collapse">
+       {% for sub in disc.subject_set.all|available:request.user %}
          <div class="panel-body">
            <li><a href="{% url 'tests:setInitialParams' sub.id %}">{{ sub.subjectName }}</a></li>
          </div>

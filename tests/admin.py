@@ -1,7 +1,6 @@
 from django.contrib import admin
 
 from tests.models import *
-from tests.models import Theme
 
 class AnswerInline(admin.TabularInline):
     model = Answer
@@ -18,3 +17,4 @@ admin.site.register(Theme)
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(Answer)
 admin.site.register(Result)
+admin.site.register(TestsStatistic)
