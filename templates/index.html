@@ -2,11 +2,19 @@
 {% load i18n %}
 
 {% block content %}
-<div class="container">
+<div class="">
+  {% if not user.is_authenticated %}
   <div class="jumbotron">
-    <h1>WELCOME</h1>
-    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-    <p><a class="btn btn-primary btn-lg">Learn more</a></p>
+    <h1>Добро пожаловать!</h1>
+    <p>Пожалуйста, авторизуйтесь.</p>
+    <p><a href="{% url 'auth_login' %}" class="btn btn-primary">{% trans "Log in" %}</a></p>
   </div>
+  {% else %}
+  <div class="jumbotron">
+    <h1>Добро пожаловать!</h1>
+    <p>Приятной работы</p>
+    <p><a href="{% url 'tests:indexSub' %}" class="btn btn-primary">Тесты</a></p>
+  </div>
+  {% endif %}
 </div>
 {% endblock %}

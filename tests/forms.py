@@ -20,10 +20,10 @@ class UploadFileForm(forms.Form):
     )
 
     CHOICES = ((True, 'Да',), (False, 'Нет',))
-    publicResults = forms.ChoiceField(widget=forms.RadioSelect, choices=CHOICES)
+    publicResults = forms.ChoiceField(widget=forms.RadioSelect, choices=CHOICES,label='Подробная статистика:')
 
     file = forms.FileField(
-        label = "Выберите файл",
+        label = "Выберите файл:",
         required=True
     )
 
@@ -36,6 +36,9 @@ class StudyGroupsForm(forms.ModelForm):
                             queryset=StudyGroup.objects.all(),
                             search_fields=['groupName__icontains']
                         )
+        }
+        labels = {
+            'groupName': 'Группы'
         }
 
 class ChoosingGroupForm(forms.Form):
@@ -85,6 +88,16 @@ class QuestionForm(forms.ModelForm):
             'theme': _('Тема'),
             'questionName': _('Вопрос'),
         }
+    def __init__(self, *args, **kwargs):
+        super(QuestionForm, self).__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.form_class = 'form-horizontal'
+        self.helper.label_class = 'col-lg-2'
+        self.helper.field_class = 'col-lg-8'
+        self.helper.layout = Layout(
+            'theme',
+            'question',
+        )
 
 class AnswerForm(forms.ModelForm):
     class Meta:

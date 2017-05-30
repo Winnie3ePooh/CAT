@@ -4,12 +4,37 @@
 
 {% block content %}
 <div class="container">
-  <h1>Результаты</h1>
-  <h2>{{endFlag}}</h2>
-  <h3>Общая статистика:</h3>
-  Всего вопросов: {{ results.rightAnswers|add:results.wrongAnswers }} <br/>
-  Из них правильно: {{results.rightAnswers}} <br/>
-  Неправильно:  {{results.wrongAnswers}}<br/>
-
+  <legend>Результат</legend>
+  <table class="table table-striped table-hover ">
+    <tbody>
+      <tr>
+        <td class="col-md-2">Всего вопросов</td>
+        <td class="col-md-2">{{result.rightAnswers|add:result.wrongAnswers}}</td>
+      </tr>
+      <tr>
+        <td class="col-md-2">Правильные ответы</td>
+        <td class="col-md-2">{{result.rightAnswers}}</td>
+      </tr>
+      <tr>
+        <td class="col-md-2">Неправильные ответы</td>
+        <td class="col-md-2">{{result.wrongAnswers}}</td>
+      </tr>
+      <tr>
+        <td class="col-md-2">Оценка</td>
+        {% if result.isPassed %}
+          <td class="col-md-2">Зачет</td>
+        {% else %}
+          <td class="col-md-2">Незачет</td>
+        {% endif %}
+      </tr>
+      <tr>
+        <td class="col-md-2">Сумма набранных баллов</td>
+        <td class="col-md-2">{{result.score}}</td>
+      </tr>
+    </tbody>
+  </table>
+  {% if result.subject.publicResults %}
+    <a class="btn btn-info" href="{% url 'tests:detailedReport' result.id%}">Подробно</a>
+  {%endif%}
 </div>
 {% endblock %}

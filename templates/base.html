@@ -19,15 +19,14 @@
             <ul class="nav navbar-nav">
               {% if user.is_authenticated %}
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Добро пожаловать, {{ user.username }}!<span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Добро пожаловать, {{ user.get_full_name }}!<span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="{% url 'students:details' %}">Личная страница</a></li>
                     <li><a href="{% url 'tests:usersTests' %}">Результаты</a></li>
+                    <li class="divider"></li>
                     {% if user|has_group:"teachers" %}
                       <li><a href="{% url 'tests:uploadFile' %}">Добавить тест</a></li>
                     {% endif %}
-
-                    <li class="divider"></li>
                     <li><a href="{% url 'tests:myTests' %}">Тесты</a></li>
                     <li class="divider"></li>
                     {% if user.is_staff %}
@@ -54,11 +53,7 @@
       </nav>
     {% endblock %}
   </div>
-
-
-
-
-    <div id="content">
+    <div id="content" class="container" style="min-height:500px;">
     {% block content %}{% endblock %}
     </div>
 

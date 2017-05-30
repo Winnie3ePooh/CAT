@@ -39,7 +39,6 @@ $(document).ready(function() {
   	var pathname = window.location.pathname.split("/");
     var catid = $('.select2-selection__rendered').text();
     var cUrl = ($(this).attr('data-type') == 'group') ? 'groupsTestDetails':'usersTestDetails';
-    alert(cUrl);
     $.ajax({
         url: '/tests/'+cUrl+'/'+pathname[pathname.length-2]+'/',
         type: "POST",
@@ -67,7 +66,6 @@ $(document).ready(function() {
   $('.remove-it').click(function(){
     var catid;
     catid = $(this).attr('data-questtid');
-    alert('catid');
     $.ajax({
         url: '/tests/questionDelete/',
         type: "GET",

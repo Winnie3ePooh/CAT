@@ -33,7 +33,7 @@ polyline{
 <div class="container" style="padding-left:0">
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h2 class="panel-title">Статистика группы {{ data.group }}</h2>
+        <h2 class="panel-title">Статистика: {{ data.group }}</h2>
       </div>
       <div class="panel-body">
         <p>Всего прохождений: {{ data.total }}</p>
@@ -43,9 +43,9 @@ polyline{
         <table class="table table-striped table-hover ">
           <thead>
             <tr>
-              <th>#</th>
               <th>Студент</th>
-              <th>Сдано или нет</th>
+              <th>Дата прохождения</th>
+              <th>Оценка</th>
               <th>Правильные ответы</th>
               <th>Неправильные ответы</th>
               <th>Сумма баллов</th>
@@ -56,9 +56,13 @@ polyline{
             {% if data.results %}
                 {% for item in data.results %}
                 <tr>
-                  <td>1</td>
                   <td>{{ item.user }}</td>
-                  <td>{{ item.isPassed }}</td>
+                  <td>{{ item.date }}</td>
+                  {% if item.isPassed %}
+                    <td class="col-md-2">Зачет</td>
+                  {% else %}
+                    <td class="col-md-2">Незачет</td>
+                  {% endif %}
                   <td>{{ item.rightAnswers }}</td>
                   <td>{{ item.wrongAnswers }}</td>
                   <td>{{ item.score }}</td>

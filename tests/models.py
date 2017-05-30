@@ -2,6 +2,7 @@ from django.db import models
 import random
 from django.contrib.auth.models import User
 from students.models import *
+import datetime
 
 
 def randomCompl():
@@ -61,3 +62,4 @@ class Result(models.Model):
     wrongAnswers = models.IntegerField(default=0)
     score = models.FloatField(default=0)
     isPassed = models.BooleanField(default=True)
+    date = models.DateTimeField(auto_now_add=True)

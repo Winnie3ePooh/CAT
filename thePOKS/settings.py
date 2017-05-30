@@ -31,7 +31,8 @@ INSTALLED_APPS = [
     'tests',
     'mathfilters',
     'bootstrap3',
-    'django_select2'
+    'django_select2',
+    'crispy_forms',
 ]
 
 SITE_ID = 1

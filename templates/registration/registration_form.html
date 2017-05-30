@@ -4,12 +4,6 @@
 {% bootstrap_css %}
 {% bootstrap_javascript %}
 <head>
-  {{ form.media.css }}
-  <style type="text/css">
-    select {
-      width: 200px;
-    }
-  </style>
 </head>
 {% block content %}
 <div class="container">
@@ -20,9 +14,13 @@
         <fieldset>
         {% csrf_token %}
         {% bootstrap_form user_form label_class='col-lg-4 control-label' field_class='col-lg-5'%}
-        {{ form }}
+        <div class="col-md-10 col-md-offset-1" style="margin-bottom: 20px;">
+          {{ form }}
+        </div>
         <div class="form-group">
-          <input onclick="$('#myPleaseWait').modal('show');" class="update-submit btn btn-primary" type="submit" value="Submit data">
+          <div class="col-md-10 col-lg-offset-4">
+            <input onclick="$('#myPleaseWait').modal('show');" class="update-submit btn btn-primary" type="submit" value="Зарегистрироваться">
+          </div>
         </div>
         </fieldset>
       </form>
@@ -30,10 +28,4 @@
   </div>
 </div>
 <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-<script type="text/javascript">
-  window.onerror = function (msg) {
-    $("body").attr("JSError", msg);
-  }
-</script>
-{{ form.media.js }}
 {% endblock %}

@@ -41,7 +41,15 @@ class IndexView(generic.ListView):
 
 
 def usersTests(request):
-    results = Result.objects.all().filter(user=request.user)
+    user_results = Result.objects.all().filter(user=request.user).order_by('date')
+    paginator = Paginator(user_results, 10) # Show 25 contacts per page
+    page = request.GET.get('page')
+    try:
+        results = paginator.page(page)
+    except PageNotAnInteger:
+        results = paginator.page(1)
+    except EmptyPage:
+        results = paginator.page(paginator.num_pages)
     return render(request, 'tests/resultsView.html', {'results': results})
 
 def resultDetails(request, resultsID):
@@ -145,7 +153,7 @@ def getNextQuestion(request):
                         score=score,
                         isPassed=isPassed)
         result.save()
-        return render(request, 'tests/results.html',{'results': result,'main': request.session['mainStatistic']['Results'],'calib':request.session['calibStatistic'],'endFlag':endFlag})
+        return render(request, 'tests/results.html',{'result': result})
 
 def studentAnswer(request, themeID, questionID):
     request.POST = request.POST.copy()
@@ -200,7 +208,7 @@ def uploadFile(request):
     else:
         uploadForm = UploadFileForm()
         groups = StudyGroupsForm()
-        groups = render_to_string('picker.html',{'form':groups},request)
+        groups = render_to_string('basePicker.html',{'form':groups},request)
     return render(request, 'tests/upload.html', {'uploadForm': uploadForm,'groups':groups})
 
 def myTests(request):
@@ -233,9 +241,7 @@ def testDetails(request, testID):
     return render(request, 'tests/testDetails.html', {'questions': questions})
 
 def groupsTestDetails(request, testID=None):
-    print('ЗАШЁЛ')
     subj = Subject.objects.get(pk=testID).studygroup.all().values_list('groupName')
-    print(subj)
     if request.method == 'POST':
         group = request.POST['group']
         results = Result.objects.filter(subject__studygroup__groupName=group)
@@ -250,17 +256,15 @@ def groupsTestDetails(request, testID=None):
     return render(request,'picker.html',{'form':form,'flag':'group'})
 
 def usersTestDetails(request, testID):
-    print('ЗАШЁЛ')
-    print(User.objects.all())
     subj = Subject.objects.get(pk=testID).studygroup.all().values_list('groupName')
-    print(subj)
     if request.method == 'POST':
         group = request.POST['group']
         group = group.split(' ')
-        print(group)
+        user = User.objects.get(first_name=group[0],last_name=group[1])
+        print(user)
         results = Result.objects.filter(user__first_name=group[0],user__last_name=group[1])
         data = {
-            'group': group,
+            'group': user,
             'total': results.count(),
             'right': results.filter(isPassed=True).count(),
             'results': results
@@ -310,12 +314,15 @@ def questionEdit(request):
         questionID = request.session['questionID']
     except KeyError:
         questionID = request.GET['questionID']
-
+    print('ЗАШЁЛ')
     question = get_object_or_404(Question, pk=int(questionID))
+    print(question)
     answersFormSet = inlineformset_factory(Question,Answer, form=AnswerForm,extra=4, can_delete=True)
     if request.method == 'POST':
         tuf = QuestionForm(request.POST, request.FILES,instance=question, prefix="main")
         formset = answersFormSet(request.POST, request.FILES, instance=question, prefix="nested")
+        print(tuf.is_valid())
+        print(formset.is_valid())
         if tuf.is_valid() and formset.is_valid():
             tuf.save()
             formset.save()

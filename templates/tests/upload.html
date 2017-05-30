@@ -13,9 +13,13 @@
         <fieldset>
           {% csrf_token %}
           {% bootstrap_form uploadForm layout='horizontal' %}
+          <div class="col-md-10" style="margin-bottom: 20px;margin-left: 20px;">
             {{ groups }}
+          </div>
           <div class="form-group">
-            <input onclick="$('#myPleaseWait').modal('show');" class="update-submit btn btn-primary" type="submit" value="Submit data">
+            <div class="col-md-10 col-lg-offset-3">
+              <input onclick="$('#myPleaseWait').modal('show');" class="update-submit btn btn-primary" type="submit" value="Загрузить">
+            </div>
           </div>
         </fieldset>
       </form>

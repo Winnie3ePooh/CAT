@@ -4,8 +4,8 @@
 <head>
   {{ form.media.css }}
   <style type="text/css">
-    .select2-container {
-        margin-left: 20px;
+    div.col-md-10 > label {
+      margin-right: 40px;
     }
     select {
       width: 380px;
@@ -15,7 +15,7 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-md-10 col-md-offset-2">
+      <div class="col-md-10 col-md-offset-1">
         <form method="post" action="">
           {% csrf_token %}
           {{ form }}
